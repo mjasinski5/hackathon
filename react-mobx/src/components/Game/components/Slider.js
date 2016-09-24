@@ -31,6 +31,7 @@ export default class Slider extends Component  {
             item.set('value', this.value);
           }}
           onDragStop={() => item.set('value', this.value)}
+          sliderStyle={{margin:'0 0 5px 0'}}
         />
       </div>
     );
