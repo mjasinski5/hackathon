@@ -7,6 +7,7 @@ export function createOutcomesFromJson(jsonData) {
     const mobxArr = asMap({});
     let entries;
     const max = jsonData.total;
+
     jsonData.entries.forEach((o) => { 
         const entry = _createEntry(o, max);
         mobxArr.set(o.name, entry);
@@ -24,7 +25,7 @@ function _createEntry(obj, max) {
         maxValue: max/2,
         baseValue: Math.round(obj.totalCash),
         chart: {
-            color: '#36A2EB' 
+            color: obj.color
         }
     })
 }

@@ -1,14 +1,12 @@
 import React from 'react';
 import { observer } from 'mobx-react';
-import { Doughnut, Radar, Bar } from 'react-chartjs-2';
-import { jsonToChartData_dogHunt } from 'commons/transform';
-import json from 'data/mainData.json';
+import { Doughnut } from 'react-chartjs-2';
 
 function RightAside({ store }){
-
+    console.log('chartDataDoughnut', store.chartDataDoughnut)
   return(
     <aside className='right'>
-      <h4>Satisfaction: {Math.floor(store.societySatisfaction * 100)}%</h4>
+
       <div style={{width: '800px'}}>
         <Doughnut 
           data={store.chartDataDoughnut} 
@@ -18,20 +16,11 @@ function RightAside({ store }){
             }
           }}
         />
-        <Radar 
-          data={store.chartDataRadar} 
-          options={{
-            animation: {
-              duration: 0
-            }
-          }}
-        />
-        <Bar 
-          data={store.chartSociety}
-        />
       </div>
     </aside>
   );
 }
 
 export default observer(RightAside);
+
+//      <h4>Satisfaction: {Math.floor(store.societySatisfaction * 100)}%</h4>

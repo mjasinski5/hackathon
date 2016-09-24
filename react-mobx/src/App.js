@@ -11,6 +11,7 @@ class App extends Component {
       <MuiThemeProvider>
         <main>
           <LeftAside store={store} />
+          <RightAside store={store} />
         </main>
       </MuiThemeProvider>    );
   }
