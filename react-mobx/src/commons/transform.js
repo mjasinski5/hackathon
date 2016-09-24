@@ -36,7 +36,8 @@ export function createDogHuntData(outcomes) {
       labels: [],
       datasets: [{
         data: [],
-        backgroundColor: []
+        backgroundColor: [],
+        borderWidth: []
       }]
     };
 
@@ -54,6 +55,10 @@ export function createDogHuntData(outcomes) {
           backgroundColor: [
             ...result.datasets[0].backgroundColor,
             item.get('chart').color
+          ],
+          borderWidth: [
+            ...result.datasets[0].borderWidth,
+            0
           ]
         }]
       };
