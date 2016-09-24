@@ -5,6 +5,7 @@ import Credit from './components/Credit';
 import Main from './components/Main';
 import Demographics from './components/Demographics';
 import LinearProgress from 'material-ui/LinearProgress';
+import ChartSatisfaction from './components/ChartSatisfaction';
 
 
 @observer
@@ -21,6 +22,7 @@ export default class App extends Component {
                 <div>
                     <h1>{name}, {age}</h1>
                     <h6>wanna be <strong>Prezydent miasta {city}</strong></h6>
+                    <ChartSatisfaction satisfaction={60} />
                 </div>
                 <div>
                   <Sliders store={store} />
