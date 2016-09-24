@@ -5,7 +5,7 @@ import Credit from './components/Credit';
 import Main from './components/Main';
 import Demographics from './components/Demographics';
 import LinearProgress from 'material-ui/LinearProgress';
-
+import SliderBottom from './components/SliderBottom';
 
 @observer
 export default class App extends Component {
@@ -16,10 +16,12 @@ export default class App extends Component {
     
     console.log('currentLoanStateInPercent', store.currentLoanStateInPercent)
     console.log('getTotalIncome', store.getTotalIncome)
+        console.log('getTotalOutcome', store.getTotalOutcome)
+
     console.log('maximumLoanValue', store.maximumLoanValue)
     console.log('currentLoanState', store.currentLoanState)
     console.log('isLoadAllowed', store.isLoadAllowed)
-    console.log('currentLoanStateInPercent', store.currentLoanStateInPercent)
+    console.log('getCurrentPropertySale', store.getCurrentPropertySale)
     console.log('currentLoanStateInPercent', store.currentLoanStateInPercent)
 
     return(
@@ -37,7 +39,7 @@ export default class App extends Component {
         </section>
         <section className="onethird">
             <Main store={store} />
-            <Credit />
+            <SliderBottom store={store}/>
         </section>
         <section className="onethird">
             <div>
