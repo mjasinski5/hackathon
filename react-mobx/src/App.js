@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-// import LandingPage from './components/LandingPage';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import LeftAside from 'components/LeftAside';
 import RightAside from 'components/RightAside';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import LandingPage from 'components/LandingPage';
 
 class App extends Component {
   render() {
@@ -10,8 +10,7 @@ class App extends Component {
     return (
       <MuiThemeProvider>
         <main>
-          <LeftAside store={store} />
-          <RightAside store={store} />
+          <LandingPage />
         </main>
       </MuiThemeProvider>    );
   }
