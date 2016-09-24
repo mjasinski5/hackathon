@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-// import LandingPage from './components/LandingPage';
-import LeftAside from 'components/LeftAside';
-import RightAside from 'components/RightAside';
+import { Router, Route, browserHistory } from 'react-router';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import LandingPage from 'components/LandingPage';
+import Game from 'components/Game';
 
 class App extends Component {
   render() {
@@ -10,8 +10,10 @@ class App extends Component {
     return (
       <MuiThemeProvider>
         <main>
-          <LeftAside store={store} />
-          <RightAside store={store} />
+          <Router history={browserHistory}>
+            <Route path="/" component={LandingPage} />
+            <Route path="app" component={Game} store={store} />
+          </Router>
         </main>
       </MuiThemeProvider>    );
   }

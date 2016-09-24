@@ -1,8 +1,9 @@
 
 #main-form {
     width: 95vw;
-    height: 90vh;
-    background-image: url('../landing_page/svg/ilu.svg');
+    height: 88vh;
+    margin: 0 auto;
+    background-image: url('./svg/ilu.svg');
     background-repeat: no-repeat;
     background-position: bottom;
     form {
@@ -26,15 +27,18 @@
             left: 10em;
         }
     }
-    button {
+    a {
         background-color: $mainblue;
         outline: 0;
         border: 0;
         border-radius: .5em;
-        padding: .5em 3em;
+        padding: .5em 0;
+        text-align: center;
         color: $white;
+        width: 5em;
         display: block;
         margin: 3em auto 0;
+        text-decoration: none;
         &:hover {
             cursor: pointer;
         }
@@ -49,3 +53,16 @@ h2 {
     font-size: 3.5em;
     text-align: center;
 }
+
+.balance {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
