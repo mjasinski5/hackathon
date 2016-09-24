@@ -39,7 +39,7 @@ export default class App extends Component {
                 </div>
                 <div className="society">
                     <button>zobacz dane demograficzne</button>
-                    <Demographics />
+                    <Demographics store={store} />
                 </div>
             </div>
         </section>
