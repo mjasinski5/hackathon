@@ -185,3 +185,7 @@ canvas { margin: 1em auto 0; }
 .demo-title { margin: 0; font-size: .8em; font-weight: 500; }
 
 .demographics h6 { margin: 0 0 1em 0; }
+
+.chart_satisfactions { color: blue; }
+
+.chart_satisfactions .happyFace { background-image: url("./svg/happy.svg"); }
