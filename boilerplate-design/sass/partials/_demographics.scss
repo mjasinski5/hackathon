@@ -16,6 +16,19 @@
         font-size: .8em;
         float: right;
     }
+    .face {
+        width: 2.8vw;
+        height: 2.8vw;
+        float: left;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .face__happy {
+        background-image: url('./svg/happy.svg');
+    }
+    .face__sad {
+        background-image: url('./svg/sad.svg');
+    }
 }
 
 .demo-title {

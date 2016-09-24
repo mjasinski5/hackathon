@@ -190,6 +190,16 @@ canvas { margin: 1em auto 0; }
 
 .society button { background-color: #00BCD4; outline: 0; border: 0; border-radius: 4px; color: #ffffff; font-size: .8em; float: right; }
 
+.society .face { width: 2.8vw; height: 2.8vw; float: left; background-repeat: no-repeat; background-position: center; }
+
+.society .face__happy { background-image: url("./svg/happy.svg"); }
+
+.society .face__sad { background-image: url("./svg/sad.svg"); }
+
 .demo-title { margin: 0; font-size: .8em; font-weight: 500; }
 
 .demographics h6 { margin: 0 0 1em 0; }
+
+.chart_satisfactions { width: 25vw; height: 50vh; }
+
+.chart_satisfactions .happyFace { width: 2.8vw; height: 2.8vw; background-image: url("./svg/happy.svg"); }
