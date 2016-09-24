@@ -3,7 +3,7 @@ import React from 'react';
 const ALL_FACES = 56;
 
 function getHappiesFacesCount(satisfaction){
-  return Math.floor((satisfaction*ALL_FACES)/100);
+  return Math.ceil((satisfaction*ALL_FACES)/100);
 }
 
 export default function({ satisfaction }){

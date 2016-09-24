@@ -188,7 +188,7 @@ canvas { margin: 1em auto 0; }
 
 .society button { background-color: #00BCD4; outline: 0; border: 0; border-radius: 4px; color: #ffffff; font-size: .8em; float: right; }
 
-.society .face { width: 2.8vw; height: 2.8vw; float: left; }
+.society .face { width: 2.8vw; height: 2.8vw; float: left; background-repeat: no-repeat; background-position: center; }
 
 .society .face__happy { background-image: url("./svg/happy.svg"); }
 
