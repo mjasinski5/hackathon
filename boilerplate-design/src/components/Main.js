@@ -1,5 +1,7 @@
 import React from 'react';
 import {Doughnut} from 'react-chartjs-2';
+import Slider from 'material-ui/Slider';
+
 
 const state = ({
   labels: [
@@ -34,8 +36,11 @@ const state = ({
 
 export default function Main(){
   return(
-    <div style={{width: '400px'}}>
-      <Doughnut width="100" height="100" data={state} />
+    <div>
+        <div style={{width: '400px'}}>
+          <Doughnut width={100} height={100} data={state} />
+        </div>
+        
     </div>
   );
 }
