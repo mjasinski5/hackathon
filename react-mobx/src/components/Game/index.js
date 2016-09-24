@@ -12,6 +12,7 @@ export default class App extends Component {
   render(){
     const { store } = this.props.route;
     const { name, age, city } = store;
+    console.log('currentLoanStateInPercent', store.currentLoanStateInPercent)
     return(
       <div>
         <section className="onethird">
@@ -32,8 +33,8 @@ export default class App extends Component {
             <div>
                 <div className="balance">
                     <h5>balans</h5>
-                    <h2>1 234 567 zł</h2>
-                    <LinearProgress mode="determinate" value={80} color='#E23442' style={{height:'1.5em', width:'70%', float:'right'}}/>
+                    <h2>{store.formatedOutcome}</h2>
+                    <LinearProgress mode="determinate" value={store.currentLoanStateInPercent} color='#E23442' style={{height:'1.5em', width:'70%', float:'right'}}/>
                 </div>
                 <div className="credit">
                 </div>
