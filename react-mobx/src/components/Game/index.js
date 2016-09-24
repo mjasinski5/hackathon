@@ -10,6 +10,11 @@ export default class App extends Component {
   render(){
     const { store } = this.props.route;
     const { name, age, city } = store;
+    console.log('income', store.getTotalIncome)
+    console.log('outcome', store.getTotalOutcome)
+    console.log('currentLoanState', store.currentLoanState)
+    console.log('isLoadAllowed', store.isLoadAllowed)
+    console.log('maximumLoanValue', store.maximumLoanValue)
     return(
       <div>
         <section className="onethird">
@@ -30,7 +35,7 @@ export default class App extends Component {
             <div>
                 <div className="balance">
                     <h5>balans</h5>
-                    <h2>1 234 567 zł</h2>
+                    <h2>{store.formatedOutcome} mln</h2>
                 </div>
                 <div className="credit">
                 </div>

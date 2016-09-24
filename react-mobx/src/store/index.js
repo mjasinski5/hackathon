@@ -105,6 +105,15 @@ export default class Store {
   }
 
   @computed
+  get formatedOutcome() { 
+    return this._round(this.getTotalOutcome, 0);
+  }
+
+  _round(n, k) { 
+    const factor = Math.pow(10, k);
+    return Math.round(n*factor)/factor;
+  }
+  @computed
   get isLoadAllowed() { 
     const k = (Math.abs(this.currentLoanState) / this.getTotalIncome);
 
