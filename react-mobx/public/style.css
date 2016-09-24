@@ -130,8 +130,6 @@ body { background-color: #e6e6e6; display: flex; justify-content: center; align-
 
 #root { width: 100vw; height: 100vh; position: relative; }
 
-canvas { margin-top: 1em; }
-
 #main-form { width: 95vw; height: 88vh; margin: 0 auto; background-image: url("./svg/ilu.svg"); background-repeat: no-repeat; background-position: bottom; }
 
 #main-form form { width: 40%; margin: 0 auto; }
@@ -152,7 +150,11 @@ h2 { font-size: 3.5em; text-align: center; }
 
 .balance h2 { margin-top: 0; text-align: right; color: #000000; }
 
-.balance h5 { color: #999999; font-family: "Roboto Slab", serif; }
+.balance h5 { color: #999999; font-size: 1.3em; font-weight: 400; font-family: "Roboto Slab", serif; margin-bottom: 1em; }
+
+.balance > div { position: relative; }
+
+.balance > div p { width: 60%; top: -14px; right: 0; text-align: center; color: #ffffff; position: absolute; z-index: 10; }
 
 .credit { margin-top: 10em; padding-left: 3em; }
 
@@ -176,7 +178,11 @@ h6 { background-color: #00BCD4; color: #ffffff; font-weight: 300; font-size: 1em
 
 canvas { margin: 1em auto 0; }
 
-.credit { width: 60%; padding: 0; margin: 12em auto 0; }
+.credit { width: 20%; padding: 0; margin: 6em 4em 0 0; float: right; display: flex; justify-content: space-between; }
+
+.credit .credit-container { position: relative; }
+
+.credit .credit-description { transform: rotate(-90deg); transform-origin: left top 0; font-size: .8em; display: inline-block; margin: 0; padding: 0; width: 200px; position: absolute; bottom: -15px; left: -20px; }
 
 .society { position: fixed; right: 0; bottom: 0; width: 25vw; box-sizing: border-box; padding: 2em; height: 50vh; background-color: #ffffff; }
 
