@@ -3,7 +3,7 @@
     width: 95vw;
     height: 88vh;
     margin: 0 auto;
-    background-image: url('../landing_page/svg/ilu.svg');
+    background-image: url('./svg/ilu.svg');
     background-repeat: no-repeat;
     background-position: bottom;
     form {
@@ -34,8 +34,10 @@
         border-radius: .5em;
         padding: .5em 3em;
         color: $white;
-        display: inline-block;
+        width: 5em;
+        display: block;
         margin: 3em auto 0;
+        text-decoration: none;
         &:hover {
             cursor: pointer;
         }

@@ -130,7 +130,7 @@ body { background-color: #e6e6e6; display: flex; justify-content: center; align-
 
 #root { width: 100vw; height: 100vh; position: relative; }
 
-#main-form { width: 95vw; height: 88vh; margin: 0 auto; background-image: url("../landing_page/svg/ilu.svg"); background-repeat: no-repeat; background-position: bottom; }
+#main-form { width: 95vw; height: 88vh; margin: 0 auto; background-image: url("./svg/ilu.svg"); background-repeat: no-repeat; background-position: bottom; }
 
 #main-form form { width: 40%; margin: 0 auto; }
 
@@ -138,7 +138,7 @@ body { background-color: #e6e6e6; display: flex; justify-content: center; align-
 
 #main-form label input { border: none; outline: 0; background-color: transparent; border-bottom: 1px solid #ffffff; position: absolute; left: 10em; }
 
-#main-form a { background-color: #00BCD4; outline: 0; border: 0; border-radius: .5em; padding: .5em 3em; color: #ffffff; display: inline-block; margin: 3em auto 0; }
+#main-form a { background-color: #00BCD4; outline: 0; border: 0; border-radius: .5em; padding: .5em 3em; color: #ffffff; width: 5em; display: block; margin: 3em auto 0; text-decoration: none; }
 
 #main-form a:hover { cursor: pointer; }
 
