@@ -2,7 +2,7 @@
 #main-form {
     width: 95vw;
     height: 90vh;
-    background-image: url('../svg/ilu.svg');
+    background-image: url('../landing_page/svg/ilu.svg');
     background-repeat: no-repeat;
     background-position: bottom;
     form {
@@ -24,6 +24,19 @@
             border-bottom: 1px solid $white;
             position: absolute;
             left: 10em;
+        }
+    }
+    button {
+        background-color: $mainblue;
+        outline: 0;
+        border: 0;
+        border-radius: .5em;
+        padding: .5em 3em;
+        color: $white;
+        display: block;
+        margin: 3em auto 0;
+        &:hover {
+            cursor: pointer;
         }
     }
 }
