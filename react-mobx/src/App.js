@@ -11,7 +11,7 @@ class App extends Component {
       <MuiThemeProvider>
         <main>
           <Router history={browserHistory}>
-            <Route path="/" component={LandingPage} />
+            <Route path="/" component={LandingPage} store={store} />
             <Route path="app" component={Game} store={store} />
           </Router>
         </main>

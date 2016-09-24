@@ -11,6 +11,7 @@ export default class App extends Component {
     const { store } = this.props.route;
     return(
         <div>
+          <p>Name: {store.name}</p>
           <LeftAside store={store} />
           <RightAside store={store} />
         </div>
