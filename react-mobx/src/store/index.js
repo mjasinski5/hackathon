@@ -26,7 +26,10 @@ export default class Store {
   taxes = this._createTaxes();
   @observable
   incomes = this._createIncomeData();
+  @observable
+  properties = this._createPropertySaleData();
 
+  
   @computed
   get chartDataDoughnut() { 
     return createDogHuntData(this.outcomes);
@@ -35,6 +38,18 @@ export default class Store {
   @computed
   get demographicsChartData() {
     return createDemographicsChartData(this.society);
+  }
+  
+  _createPropertySaleData() { 
+    return asMap({
+      'sprzedaz' : asMap({
+        value: 0,
+        baseValue: 0,
+        weight: 1000,
+        min: 0,
+        max: 10432
+      })
+    })
   }
 
   _createTaxes() {
@@ -210,6 +225,11 @@ export default class Store {
     }, 0);
   }
 
+  @computed
+  get propertySaleSatifaction() { 
+    return this._calulcatePropertySale(this.properties.values());
+  }
+
   _calcTaxValue(taxes, propertyToCheck) {
     let sum = 0;
       
@@ -225,7 +245,7 @@ export default class Store {
   get societySatisfaction(){
     const satisfaction = this.moneySatisfaction;
     const taxesSatisfaction =  this.taxesSatifsaction;
-
+    const propertySaleSatisfaction = this.propertySaleSatifaction;
     const totalSatisfaction = satisfaction + taxesSatisfaction;
     // const totalMinSatisfaction = this.minSocietySatisfaction + this.taxesMinSatisfaction;
     // const totalMaxSatisfaction = this.maxSocietySatisfaction + this.taxesMaxSatisfaction;
@@ -255,8 +275,11 @@ export default class Store {
   }
 
   _calculateRateTax(baseValue, currentValue, weight) { 
-    console.log(baseValue, currentValue, weight)
     return (baseValue - currentValue) * weight;
+  }
+
+  _calulcatePropertySale(currentValue, baseValue, weight) {
+      return this._calculateRateTax(currentValue, baseValue, weight)
   }
 
 }
