@@ -18,11 +18,19 @@ body {
 
 .onethird {
     width: 33%;
+    height: 100vh;
     box-sizing: border-box;
     float: left;
     padding: 1em 2em;
     &:first-child {
         border-right: 2px solid $white;
+    }
+    &:nth-child(2) {
+        display: flex;
+        justify-content: center;
+        > div {
+
+        }
     }
 }
 
