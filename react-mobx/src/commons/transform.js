@@ -21,7 +21,7 @@ function _createEntry(obj, max) {
         name: obj.name,
         value: obj.totalCash,
         minValue: minV,
-        maxValue: max,
+        maxValue: max/2,
         baseValue: Math.round(obj.totalCash),
         chart: {
             color: '#36A2EB' 
