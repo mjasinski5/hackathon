@@ -64,3 +64,33 @@ export function createDogHuntData(outcomes) {
       };
     }, init);
 }
+
+export function createDemographicsChartData(society){
+  const init = {
+    labels: [],
+    datasets: [
+      {
+        label: 'ile ludzi',
+        backgroundColor: '#00BCD4',
+        hoverBackgroundColor: '#00BCD4',
+        data: []
+      }
+    ]
+  };
+
+  return society.entries().reduce( (result, [key, value]) => {
+    return {
+      labels: [
+        ...result.labels,
+        key
+      ],
+      datasets: [{
+        ...result.datasets[0],
+        data: [
+          ...result.datasets[0].data,
+          value.size
+        ]
+      }]
+    };
+  }, init);
+}

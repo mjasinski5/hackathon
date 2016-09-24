@@ -1,5 +1,5 @@
 import { observable, computed, asMap } from 'mobx';
-import { createOutcomesFromJson, createDogHuntData } from 'commons/transform';
+import { createOutcomesFromJson, createDogHuntData, createDemographicsChartData } from 'commons/transform';
 import json from 'data/mainData.json';
 
 const taxWeight = 700000000;
@@ -18,6 +18,9 @@ export default class Store {
   city = 'Wrocław';
 
   @observable
+  society = asMap()
+
+  @observable
   outcomes = createOutcomesFromJson(json);
   @observable
   taxes = this._createTaxes();
@@ -28,6 +31,11 @@ export default class Store {
   get chartDataDoughnut() { 
     return createDogHuntData(this.outcomes);
   } 
+
+  @computed
+  get demographicsChartData() {
+    return createDemographicsChartData(this.society);
+  }
 
   _createTaxes() {
     return asMap({
@@ -104,6 +112,20 @@ export default class Store {
     return this.getTotalIncome - this.getTotalOutcome; 
   }
 
+  @computed
+  get currentLoanStateInPercent() { 
+    return Math.abs(this.currentLoanState * 100 / this.maximumLoanValue);
+  }
+
+  @computed
+  get formatedOutcome() { 
+    return this._round(this.getTotalOutcome, 0);
+  }
+
+  _round(n, k) { 
+    const factor = Math.pow(10, k);
+    return Math.round(n*factor)/factor;
+  }
   @computed
   get isLoadAllowed() { 
     const k = (Math.abs(this.currentLoanState) / this.getTotalIncome);
@@ -236,9 +258,5 @@ export default class Store {
     console.log(baseValue, currentValue, weight)
     return (baseValue - currentValue) * weight;
   }
-
-  @observable
-  society = asMap()
-
 
 }

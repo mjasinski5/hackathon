@@ -15,12 +15,12 @@ const data = {
 };
 
 
-export default function Demographics(){
+export default function Demographics({ store }){
   return(
     <div className="demo">
       <p className="demo-title">Społeczeństwo</p>
       <div style={{width: '320px'}}>
-        <HorizontalBar width={100} height={95} data={data} />
+        <HorizontalBar width={100} height={95} data={store.demographicsChartData} />
       </div>
     </div>
   );

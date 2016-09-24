@@ -13,6 +13,7 @@ export default class App extends Component {
   render(){
     const { store } = this.props.route;
     const { name, age, city } = store;
+    console.log('currentLoanStateInPercent', store.currentLoanStateInPercent)
     return(
       <div>
         <section className="onethird">
@@ -36,9 +37,9 @@ export default class App extends Component {
             <div>
                 <div className="balance">
                     <h5>wydatki</h5>
-                    <h2>1 234 567 zł</h2>
+                    <h2>{store.formatedOutcome}</h2>
                     <h5>zadłużenie</h5>
-                    <LinearProgress mode="determinate" value={80} color='#E23442' style={{height:'1.5em', width:'70%', float:'right'}}/>
+                    <LinearProgress mode="determinate" value={store.currentLoanStateInPercent} color='#E23442' style={{height:'1.5em', width:'70%', float:'right'}}/>
                 </div>
                 <div className="main-down">
                     <div className="balance"></div>
@@ -46,7 +47,7 @@ export default class App extends Component {
                 </div>
                 <div className="society">
                     <button>zobacz dane demograficzne</button>
-                    <Demographics />
+                    <Demographics store={store} />
                 </div>
             </div>
         </section>
