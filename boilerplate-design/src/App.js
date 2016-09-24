@@ -27,6 +27,7 @@ export default function App(){
             <div className="balance">
                 <h5>balans</h5>
                 <h2>1 234 567 zł</h2>
+                
             </div>
             <div className="credit">
             </div>

@@ -1,6 +1,5 @@
 import React from 'react';
 import {Doughnut} from 'react-chartjs-2';
-import Slider from 'material-ui/Slider';
 
 
 const state = ({

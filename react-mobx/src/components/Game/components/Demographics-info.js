@@ -1,8 +1,6 @@
 import React from 'react';
 import Slider from 'material-ui/Slider';
 import {HorizontalBar} from 'react-chartjs-2';
-import LinearProgress from 'material-ui/LinearProgress';
-
 
 const data = {
   labels: ['0-9', '10-19', '20-29', '30-39', '40-49', '50-59', '60-69', '70-79', '>80'],
@@ -17,7 +15,7 @@ const data = {
 };
 
 
-export default function Demographics(){
+export default function Demographics-info(){
   return(
     <div className="demo">
       <p className="demo-title">Społeczeństwo</p>

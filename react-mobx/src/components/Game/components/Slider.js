@@ -24,24 +24,26 @@ export default class Slider extends Component  {
       },
     });
     return(
-      <div>
+      <div className='oneslider'>
         <p className='category'>
           {name}
         </p>
+        <p className='cat-description'>
+          {Math.floor(this.value)} mln
+        </p>
         <MuiThemeProvider muiTheme={muiTheme}>
-          <SliderMUI 
-            description={`${this.value}`}
-            step={1}
-            value={value} 
-            min={minValue}
-            max={maxValue}
-            onChange={(event, value) => {
-              this.value = value;
-              item.set('value', this.value);
-            }}
-            onDragStop={() => item.set('value', this.value)}
-            sliderStyle={{margin:'0 0 5px 0'}}
-          />
+        <SliderMUI 
+          step={1}
+          value={value} 
+          min={minValue}
+          max={maxValue}
+          onChange={(event, value) => {
+            this.value = value;
+            item.set('value', this.value);
+          }}
+          onDragStop={() => item.set('value', this.value)}
+          sliderStyle={{margin:'0 0 5px 0'}}
+        />
         </MuiThemeProvider>
       </div>
     );

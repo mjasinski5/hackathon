@@ -1,13 +1,24 @@
-.demographics {
-    position: absolute;
+.society {
+    position: fixed;
     right: 0;
     bottom: 0;
-    width: 30vw;
+    width: 25vw;
     box-sizing: border-box;
     padding: 2em;
-    height: 45vh;
+    height: 50vh;
     background-color: $white;
+    button {
+        background-color: $mainblue;
+        outline:0;
+        border:0;
+        border-radius: 10px;
+        color: $white;
+        font-size: .8em;
+        float: right;
+    }
 }
+
+
 
 .demo-title {
     margin: 0;

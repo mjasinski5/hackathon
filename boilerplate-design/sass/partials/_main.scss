@@ -1,6 +1,6 @@
 .onethird {
     width: 33%;
-    height: 100vh;
+    min-height: 100vh;
     box-sizing: border-box;
     float: left;
     padding: 1em 2em;
@@ -27,7 +27,7 @@ h6 {
     font-size: 1em;
     padding: .2em;
     margin: 1em 0;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
 }
 
 .category {
@@ -36,13 +36,14 @@ h6 {
     margin-bottom: 0;
 }
 
-.demographics {
+.cat-description {
     position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 25vw;
-    box-sizing: border-box;
-    padding: 2em;
-    height: 45vh;
-    background-color: $white;
+    right:0;
+    top:-12px;
+    font-size: .8em;
+    opacity: .8;
+}
+
+.oneslider {
+    position: relative;
 }
