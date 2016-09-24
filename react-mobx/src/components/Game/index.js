@@ -30,7 +30,6 @@ export default class App extends Component {
                 <div>
                     <h1>{name}, {age}</h1>
                     <h6>wanna be <strong>Prezydent miasta {city}</strong></h6>
-                    <ChartSatisfaction satisfaction={60} />
                 </div>
                 <div>
                   <Sliders store={store} />
@@ -58,7 +57,7 @@ export default class App extends Component {
                 </div>
                 <div className="society">
                     <button>zobacz dane demograficzne</button>
-                    <Demographics store={store} />
+                    <ChartSatisfaction satisfaction={Math.floor(store.societySatisfaction*100)} />
                 </div>
             </div>
         </section>
