@@ -61,8 +61,8 @@ export default class Store {
   }
 
   _calc(group, sum, propertyToGet) {
-    const size = group.get('size');
-    const weights = group.get('weights');
+    const size = group.size
+    const weights = group.weights
     const groupRate = weights.keys().reduce( (sum, name) => {
       const outcome = this.outcomes.get(name);
       return sum + this._calculateRate(outcome.get('baseValue'), outcome.get(propertyToGet), weights.get(name), size);
