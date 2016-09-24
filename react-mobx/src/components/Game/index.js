@@ -6,6 +6,8 @@ import Main from './components/Main';
 import Demographics from './components/Demographics';
 import LinearProgress from 'material-ui/LinearProgress';
 import SliderBottom from './components/SliderBottom';
+import ChartSatisfaction from './components/ChartSatisfaction';
+
 
 @observer
 export default class App extends Component {
@@ -58,7 +60,7 @@ export default class App extends Component {
                 </div>
                 <div className="society">
                     <button>zobacz dane demograficzne</button>
-                    <Demographics store={store} />
+                    <ChartSatisfaction satisfaction={Math.floor(store.societySatisfaction*100)} />
                 </div>
             </div>
         </section>

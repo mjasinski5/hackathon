@@ -258,7 +258,7 @@ export default class Store {
     // const totalMinSatisfaction = this.minSocietySatisfaction + this.taxesMinSatisfaction;
     // const totalMaxSatisfaction = this.maxSocietySatisfaction + this.taxesMaxSatisfaction;
 
-    return  this._convertToUnit(totalSatisfaction, this.minSocietySatisfaction, this.maxSocietySatisfaction);
+    return  Math.min(this._convertToUnit(totalSatisfaction, this.minSocietySatisfaction, this.maxSocietySatisfaction), 1);
     // return  this._convertToUnit(satisfaction, this.minSocietySatisfaction, this.maxSocietySatisfaction);
   }
   
