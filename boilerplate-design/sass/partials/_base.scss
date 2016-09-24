@@ -13,6 +13,7 @@ body {
 #root {
     width: 100vw;
     height: 100vh;
+    position: relative;
 }
 
 .onethird {
@@ -46,4 +47,9 @@ h6 {
     font-family: "Roboto Slab";
     font-size: .9em;
     margin-bottom: 0;
+}
+
+.canvas {
+    position: absolute;
+    margin: 0 auto;
 }
