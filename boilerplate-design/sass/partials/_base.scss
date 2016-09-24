@@ -1,0 +1,19 @@
+* {
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    background-color: $backgroundgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+
+#root {
+    background-color: pink;
+}
+
+.onethird {
+    width: 33%;
+}
