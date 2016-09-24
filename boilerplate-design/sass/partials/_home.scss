@@ -1,0 +1,51 @@
+
+#main-form {
+    width: 95vw;
+    height: 90vh;
+    background-image: url('../landing_page/svg/ilu.svg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    form {
+        width: 40%;
+        margin: 0 auto;
+    }
+    label {
+        display: block;
+        font-family: "Roboto Slab", serif;
+        font-weight: 300;
+        font-size: 1.5em;
+        margin: 1em 0;
+        color: $white;
+        position: relative;
+        input {
+            border: none;
+            outline: 0;
+            background-color: transparent;
+            border-bottom: 1px solid $white;
+            position: absolute;
+            left: 10em;
+        }
+    }
+    button {
+        background-color: $mainblue;
+        outline: 0;
+        border: 0;
+        border-radius: .5em;
+        padding: .5em 3em;
+        color: $white;
+        display: block;
+        margin: 3em auto 0;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.blue {
+    color: $mainblue;
+}
+
+h2 {
+    font-size: 3.5em;
+    text-align: center;
+}
