@@ -128,11 +128,13 @@ textarea { overflow: auto; }
 
 body { background-color: #e6e6e6; display: flex; justify-content: center; align-items: center; height: 100vh; }
 
-#root { width: 100vw; height: 100vh; }
+#root { width: 100vw; height: 100vh; position: relative; }
 
-.onethird { width: 33%; box-sizing: border-box; float: left; padding: 1em 2em; }
+.onethird { width: 33%; height: 100vh; box-sizing: border-box; float: left; padding: 1em 2em; }
 
 .onethird:first-child { border-right: 2px solid #ffffff; }
+
+.onethird:nth-child(2) { display: flex; justify-content: center; }
 
 h1 { margin: 0; padding: 0; font-weight: 100; font-size: 3em; }
 
@@ -140,7 +142,9 @@ h6 { background-color: #00BCD4; color: #ffffff; font-weight: 300; font-size: 1em
 
 .category { font-family: "Roboto Slab"; font-size: .9em; margin-bottom: 0; }
 
-#main-form { width: 95vw; height: 90vh; background-image: url("./svg/ilu.svg"); background-repeat: no-repeat; background-position: bottom; }
+.canvas { position: absolute; margin: 0 auto; }
+
+#main-form { width: 95vw; height: 88vh; margin: 0 auto; background-image: url("./svg/ilu.svg"); background-repeat: no-repeat; background-position: bottom; }
 
 #main-form form { width: 40%; margin: 0 auto; }
 
@@ -148,9 +152,9 @@ h6 { background-color: #00BCD4; color: #ffffff; font-weight: 300; font-size: 1em
 
 #main-form label input { border: none; outline: 0; background-color: transparent; border-bottom: 1px solid #ffffff; position: absolute; left: 10em; }
 
-#main-form button { background-color: #00BCD4; outline: 0; border: 0; border-radius: .5em; padding: .5em 3em; color: #ffffff; display: block; margin: 3em auto 0; }
+#main-form a { background-color: #00BCD4; outline: 0; border: 0; border-radius: .5em; padding: .5em 3em; color: #ffffff; display: block; margin: 3em auto 0; }
 
-#main-form button:hover { cursor: pointer; }
+#main-form a:hover { cursor: pointer; }
 
 .blue { color: #00BCD4; }
 

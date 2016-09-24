@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 export default function LandingPage(){
   return(
@@ -9,7 +10,9 @@ export default function LandingPage(){
         <label>wiek:<input type="text" className="age" placeholder="27 lat" /></label>
         <label>miasto:<input type="text" className="city" placeholder="Wrocław" /></label>
       </form>
-      <button>zagraj!</button>
+      <Link to='app'>
+        zagraj!
+      </Link>
     </section> 
   );
 }
