@@ -1,0 +1,22 @@
+.demographics {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 30vw;
+    box-sizing: border-box;
+    padding: 2em;
+    height: 45vh;
+    background-color: $white;
+}
+
+.demo-title {
+    margin: 0;
+    font-size: .8em;
+    font-weight: 500;
+}
+
+.demographics {
+    h6 {
+        margin: 0 0 1em 0;
+    }
+}
