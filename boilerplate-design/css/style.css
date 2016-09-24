@@ -130,7 +130,7 @@ body { background-color: #e6e6e6; display: flex; justify-content: center; align-
 
 #root { width: 100vw; height: 100vh; position: relative; }
 
-#main-form { width: 95vw; height: 88vh; margin: 0 auto; background-image: url("./svg/ilu.svg"); background-repeat: no-repeat; background-position: bottom; }
+#main-form { width: 95vw; height: 88vh; margin: 0 auto; background-repeat: no-repeat; background-position: bottom; }
 
 #main-form form { width: 40%; margin: 0 auto; }
 
@@ -146,7 +146,11 @@ body { background-color: #e6e6e6; display: flex; justify-content: center; align-
 
 h2 { font-size: 3.5em; text-align: center; }
 
-.balance { text-align: center; }
+.balance { text-align: right; color: #00BCD4; }
+
+.balance h2 { margin-top: 0; text-align: right; color: #000000; }
+
+.credit { margin-top: 10em; padding-left: 3em; }
 
 .onethird { width: 33%; height: 100vh; box-sizing: border-box; float: left; padding: 1em 2em; }
 
@@ -161,3 +165,9 @@ h6 { background-color: #00BCD4; color: #ffffff; font-weight: 300; font-size: 1em
 .category { font-family: "Roboto Slab"; font-size: 1.7vh; margin-bottom: 0; }
 
 .demographics { position: absolute; right: 0; bottom: 0; width: 25vw; box-sizing: border-box; padding: 2em; height: 45vh; background-color: #ffffff; }
+
+.demographics { position: absolute; right: 0; bottom: 0; width: 30vw; box-sizing: border-box; padding: 2em; height: 45vh; background-color: #ffffff; }
+
+.demo-title { margin: 0; font-size: .8em; font-weight: 500; }
+
+.demographics h6 { margin: 0 0 1em 0; }

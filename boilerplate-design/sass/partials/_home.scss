@@ -3,7 +3,7 @@
     width: 95vw;
     height: 88vh;
     margin: 0 auto;
-    background-image: url('./svg/ilu.svg');
+    // background-image: url('./svg/ilu.svg');
     background-repeat: no-repeat;
     background-position: bottom;
     form {
@@ -55,13 +55,20 @@ h2 {
 }
 
 .balance {
-    text-align: center;
+    text-align: right;
+    color: $mainblue;
+    // margin-top: 5em;
+    h2 {
+        margin-top: 0;
+        text-align: right;
+        color: $black;
+    }
 }
 
-
-
-
-
+.credit {
+    margin-top: 10em;
+    padding-left: 3em;
+}
 
 
 

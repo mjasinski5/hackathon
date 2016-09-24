@@ -6,8 +6,8 @@ function RightAside({ store }){
     console.log('chartDataDoughnut', store.chartDataDoughnut)
   return(
     <aside className='right'>
-      <p>{store.societySatisfaction}</p>
       <div style={{width: '800px'}}>
+      {store.societySatisfaction}
         <Doughnut 
           data={store.chartDataDoughnut} 
           options={{
