@@ -64,3 +64,33 @@ export function createDogHuntData(outcomes) {
       };
     }, init);
 }
+
+export function createDemographicsChartData(society){
+  const init = {
+    labels: ['0-9', '10-19', '20-29', '30-39', '40-49', '50-59', '60-69', '70-79', '>80'],
+    datasets: [
+      {
+        label: 'ile ludzi',
+        backgroundColor: '#00BCD4',
+        hoverBackgroundColor: '#00BCD4',
+        data: []
+      }
+    ]
+  };
+
+  return society.entries().reduce( (result, [key, value]) => {
+    return {
+      labels: [
+        ...result.labels,
+        key
+      ],
+      datasets: [{
+        ...result.datasets[0],
+        data: [
+          ...result.datasets[0].data,
+          value.size
+        ]
+      }]
+    };
+  }, init);
+}
