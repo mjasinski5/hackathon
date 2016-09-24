@@ -1,6 +1,7 @@
 import React from 'react';
 import Sliders from './components/Sliders';
 import Main from './components/Main';
+import Demographics from './components/Demographics';
 
 export default function App(){
   return(
@@ -20,7 +21,15 @@ export default function App(){
         <Main />
     </section>
     <section className="onethird">
-        
+        <div>
+            <div className="balance">
+                <h5>balans</h5>
+                <h2>1 234 567 zł</h2>
+            </div>
+            <div className="demographics">
+                <Demographics />
+            </div>
+        </div>
     </section>
   </div>
   );

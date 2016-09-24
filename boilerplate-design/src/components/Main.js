@@ -34,8 +34,8 @@ const state = ({
 
 export default function Main(){
   return(
-    <div>
-      <Doughnut data={state} />
+    <div style={{width: '400px'}}>
+      <Doughnut width="100" height="100" data={state} />
     </div>
   );
 }

@@ -1,0 +1,48 @@
+.onethird {
+    width: 33%;
+    height: 100vh;
+    box-sizing: border-box;
+    float: left;
+    padding: 1em 2em;
+    &:first-child {
+        border-right: 2px solid $white;
+    }
+    &:nth-child(2) {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-weight: 100;
+    font-size: 3em;
+}
+
+h6 {
+    background-color: $mainblue;
+    color: $white;
+    font-weight: 300;
+    font-size: 1em;
+    padding: .2em;
+    margin: 1em 0;
+    margin-bottom: 3em;
+}
+
+.category {
+    font-family: "Roboto Slab";
+    font-size: 1.7vh;
+    margin-bottom: 0;
+}
+
+.demographics {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 25vw;
+    box-sizing: border-box;
+    padding: 2em;
+    height: 45vh;
+    background-color: $white;
+}

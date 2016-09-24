@@ -34,7 +34,7 @@
         border-radius: .5em;
         padding: .5em 3em;
         color: $white;
-        display: block;
+        display: inline-block;
         margin: 3em auto 0;
         &:hover {
             cursor: pointer;
@@ -50,3 +50,16 @@ h2 {
     font-size: 3.5em;
     text-align: center;
 }
+
+.balance {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
