@@ -64,8 +64,24 @@ h2 {
     }
     h5 {
        color: $grey;
+       font-size: 1.3em;
+       font-weight: 400;
        font-family: "Roboto Slab", serif;
+       margin-bottom: 1em;
     }
+    > div {
+        position: relative;
+        p {
+            width: 60%;
+            top: -14px;
+            right: 0;
+            text-align: center;
+            color: $white;
+            position: absolute;
+            z-index: 10;
+        }
+    }
+    
 }
 
 .credit {

@@ -29,17 +29,18 @@ export default class App extends Component {
         </section>
         <section className="onethird">
             <Main store={store} />
-            <div className="credit">
-                <Credit />
-            </div>
+            <Credit />
         </section>
         <section className="onethird">
             <div>
                 <div className="balance">
                     <h5>wydatki</h5>
-                    <h2>{store.formatedOutcome}</h2>
+                    <h2>{store.formatedOutcome} mln</h2>
                     <h5>zadłużenie</h5>
-                    <LinearProgress mode="determinate" value={store.currentLoanStateInPercent} color='#E23442' style={{height:'1.5em', width:'70%', float:'right'}}/>
+                    <div>
+                        <LinearProgress mode="determinate" value={store.currentLoanStateInPercent} color='#E23442' style={{height:'1.5em', width:'70%', float:'right'}}/>
+                        <p>0 %</p>
+                    </div>
                 </div>
                 <div className="main-down">
                     <div className="balance"></div>
