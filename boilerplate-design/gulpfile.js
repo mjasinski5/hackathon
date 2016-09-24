@@ -7,7 +7,7 @@ gulp.task('sass', function() {
             .pipe(sass({
                 'outputStyle' : 'compact'
             }))
-            .pipe(gulp.dest('./css'));
+            .pipe(gulp.dest('../react-mobx/public'));
 });
 
 gulp.task('serve', ['sass'], function(){

@@ -16,12 +16,14 @@ export default class Slider extends Component  {
     const { item } = this.props;
     const { name, value, minValue, maxValue } = toJS(item);
     return(
-      <div>
+      <div className='oneslider'>
         <p className='category'>
           {name}
         </p>
+        <p className='cat-description'>
+        {Math.floor(this.value)} mln
+        </p>
         <SliderMUI 
-          description={`${this.value}`}
           step={1}
           value={value} 
           min={minValue}
