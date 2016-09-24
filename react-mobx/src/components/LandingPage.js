@@ -6,7 +6,7 @@ export default class LandingPage extends Component {
   render(){
     const { store } = this.props; 
     return(
-      <h1>{store.name}</h1>
+      <h1>{store.name}{store.society.get('0-9').size}</h1>
     );
   }
 }

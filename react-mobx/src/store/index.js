@@ -3,6 +3,10 @@ import { createOutcomesFromJson, createDogHuntData } from 'commons/transform';
 import json from 'data/mainData.json';
 
 export default class Store {
+  constructor({ society }){
+    this.society = asMap(society);
+  }
+
   @observable
   name = 'Andrzej';
 
@@ -24,5 +28,8 @@ export default class Store {
   //   return sum;
   // }
 
+
+  @observable
+  society = asMap()
 
 }
