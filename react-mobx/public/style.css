@@ -130,6 +130,8 @@ body { background-color: #e6e6e6; display: flex; justify-content: center; align-
 
 #root { width: 100vw; height: 100vh; position: relative; }
 
+canvas { margin-top: 1em; }
+
 #main-form { width: 95vw; height: 88vh; margin: 0 auto; background-image: url("./svg/ilu.svg"); background-repeat: no-repeat; background-position: bottom; }
 
 #main-form form { width: 40%; margin: 0 auto; }
@@ -146,21 +148,13 @@ body { background-color: #e6e6e6; display: flex; justify-content: center; align-
 
 h2 { font-size: 3.5em; text-align: center; }
 
-.balance { text-align: right; color: #00BCD4; }
+.balance { text-align: right; }
 
 .balance h2 { margin-top: 0; text-align: right; color: #000000; }
 
+.balance h5 { color: #999999; font-family: "Roboto Slab", serif; }
+
 .credit { margin-top: 10em; padding-left: 3em; }
-
-.onethird { width: 33%; min-height: 100vh; box-sizing: border-box; float: left; padding: 1em 2em; }
-
-.onethird:first-child { border-right: 2px solid #ffffff; }
-
-.onethird:nth-child(2) { display: flex; justify-content: center; }
-
-h1 { margin: 0; padding: 0; font-weight: 100; font-size: 3em; }
-
-h6 { background-color: #00BCD4; color: #ffffff; font-weight: 300; font-size: 1em; padding: .2em; margin: 1em 0; margin-bottom: 2em; }
 
 .category { font-family: "Roboto Slab"; font-size: 1.7vh; margin-bottom: 0; }
 
@@ -168,9 +162,25 @@ h6 { background-color: #00BCD4; color: #ffffff; font-weight: 300; font-size: 1em
 
 .oneslider { position: relative; }
 
+.onethird { width: 33%; min-height: 100vh; box-sizing: border-box; float: left; padding: 1em 2em; }
+
+.onethird:first-child { border-right: 2px solid #ffffff; }
+
+.onethird:nth-child(2) { width: 40%; }
+
+.onethird:nth-child(3) { width: 23%; }
+
+h1 { margin: 0; padding: 0; font-weight: 100; font-size: 3em; }
+
+h6 { background-color: #00BCD4; color: #ffffff; font-weight: 300; font-size: 1em; padding: .2em; margin: 1em 0; margin-bottom: 2em; }
+
+canvas { margin: 1em auto 0; }
+
+.credit { width: 60%; padding: 0; margin: 12em auto 0; }
+
 .society { position: fixed; right: 0; bottom: 0; width: 25vw; box-sizing: border-box; padding: 2em; height: 50vh; background-color: #ffffff; }
 
-.society button { background-color: #00BCD4; outline: 0; border: 0; border-radius: 10px; color: #ffffff; font-size: .8em; float: right; }
+.society button { background-color: #00BCD4; outline: 0; border: 0; border-radius: 4px; color: #ffffff; font-size: .8em; float: right; }
 
 .demo-title { margin: 0; font-size: .8em; font-weight: 500; }
 

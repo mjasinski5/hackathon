@@ -56,12 +56,15 @@ h2 {
 
 .balance {
     text-align: right;
-    color: $mainblue;
     // margin-top: 5em;
     h2 {
         margin-top: 0;
         text-align: right;
         color: $black;
+    }
+    h5 {
+       color: $grey;
+       font-family: "Roboto Slab", serif;
     }
 }
 

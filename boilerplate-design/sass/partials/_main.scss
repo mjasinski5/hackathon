@@ -8,8 +8,11 @@
         border-right: 2px solid $white;
     }
     &:nth-child(2) {
-        display: flex;
-        justify-content: center;
+        width:40%;
+
+    }
+    &:nth-child(3) {
+        width: 23%;
     }
 }
 
@@ -30,20 +33,14 @@ h6 {
     margin-bottom: 2em;
 }
 
-.category {
-    font-family: "Roboto Slab";
-    font-size: 1.7vh;
-    margin-bottom: 0;
+canvas {
+    margin: 1em auto 0;
 }
 
-.cat-description {
-    position: absolute;
-    right:0;
-    top:-12px;
-    font-size: .8em;
-    opacity: .8;
+.credit {
+    width: 60%;
+    padding: 0;
+    margin: 12em auto 0;
+
 }
 
-.oneslider {
-    position: relative;
-}
