@@ -1,7 +1,9 @@
+import { asMap } from 'mobx';
+
 export default  {
   '0-9': {
     size: 61317,
-    weights: {
+    weights: asMap({
       'Oświata i wychowanie': 10,
       'Transport i łączność': 0,
       'Gospodarka komunalna i ochrona środowiska': 0,
@@ -15,11 +17,11 @@ export default  {
       'Pozostałe zadania w zakresie polityki społecznej': 4,
       'Bezpieczeństwo publiczne i ochrona przeciwpożarowa': 0,
       'Pozostale wydatki': 0
-    }
+    })
   },
   '10-19': {
     size: 45222,
-    weights: {
+    weights: asMap({
       'Oświata i wychowanie': 10,
       'Transport i łączność': 6,
       'Gospodarka komunalna i ochrona środowiska': 0,
@@ -33,11 +35,11 @@ export default  {
       'Pozostałe zadania w zakresie polityki społecznej': 0,
       'Bezpieczeństwo publiczne i ochrona przeciwpożarowa': 4,
       'Pozostale wydatki': 0,
-    }
+    })
   },
   '20-29': {
     size: 88582,
-    weights: {
+    weights: asMap({
       'Oświata i wychowanie': 7,
       'Transport i łączność': 8,
       'Gospodarka komunalna i ochrona środowiska': 5,
@@ -51,11 +53,11 @@ export default  {
       'Pozostałe zadania w zakresie polityki społecznej': 2,
       'Bezpieczeństwo publiczne i ochrona przeciwpożarowa': 6,
       'Pozostale wydatki': 0,
-    }
+    })
   },
   '30-39': {
     size: 120268,
-    weights: {
+    weights: asMap({
       'Oświata i wychowanie': 3,
       'Transport i łączność': 10,
       'Gospodarka komunalna i ochrona środowiska': 4,
@@ -69,11 +71,11 @@ export default  {
       'Pozostałe zadania w zakresie polityki społecznej': 5,
       'Bezpieczeństwo publiczne i ochrona przeciwpożarowa': 8,
       'Pozostale wydatki': 0,
-    }
+    })
   },
   '40-49': {
     size: 74511,
-    weights: {
+    weights: asMap({
       'Oświata i wychowanie': 10,
       'Transport i łączność': 8,
       'Gospodarka komunalna i ochrona środowiska': 10,
@@ -87,11 +89,11 @@ export default  {
       'Pozostałe zadania w zakresie polityki społecznej': 7,
       'Bezpieczeństwo publiczne i ochrona przeciwpożarowa': 9,
       'Pozostale wydatki': 0
-    }
+    })
   },
   '50-59': {
     size: 82526,
-      weights: {
+      weights: asMap({
       'Oświata i wychowanie': 3,
       'Transport i łączność': 5,
       'Gospodarka komunalna i ochrona środowiska': 4,
@@ -105,11 +107,11 @@ export default  {
       'Pozostałe zadania w zakresie polityki społecznej': 6,
       'Bezpieczeństwo publiczne i ochrona przeciwpożarowa': 4,
       'Pozostale wydatki': 0
-    }
+    })
   },
   '60-69': {
     size: 86230,
-      weights: {
+      weights: asMap({
       'Oświata i wychowanie': 1,
       'Transport i łączność': 10,
       'Gospodarka komunalna i ochrona środowiska': 3,
@@ -123,11 +125,11 @@ export default  {
       'Pozostałe zadania w zakresie polityki społecznej': 10,
       'Bezpieczeństwo publiczne i ochrona przeciwpożarowa': 10,
       'Pozostale wydatki': 0
-    }
+    })
   },
   '70-79': {
     size: 43142,
-      weights: {
+      weights: asMap({
       'Oświata i wychowanie': 1,
       'Transport i łączność': 10,
       'Gospodarka komunalna i ochrona środowiska': 2,
@@ -141,11 +143,11 @@ export default  {
       'Pozostałe zadania w zakresie polityki społecznej': 10,
       'Bezpieczeństwo publiczne i ochrona przeciwpożarowa': 8,
       'Pozostale wydatki': 0
-    }
+    })
   },
   '>80': {
     size: 32689,
-      weights: {
+      weights: asMap({
       'Oświata i wychowanie': 0,
       'Transport i łączność': 10,
       'Gospodarka komunalna i ochrona środowiska': 5,
@@ -159,6 +161,6 @@ export default  {
       'Pozostałe zadania w zakresie polityki społecznej': 10,
       'Bezpieczeństwo publiczne i ochrona przeciwpożarowa': 8,
       'Pozostale wydatki': 0
-    }
+    })
   }
 }
