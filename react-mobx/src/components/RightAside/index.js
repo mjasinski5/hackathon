@@ -3,7 +3,6 @@ import { observer } from 'mobx-react';
 import { Doughnut } from 'react-chartjs-2';
 
 function RightAside({ store }){
-    console.log('chartDataDoughnut', store.chartDataDoughnut)
   return(
     <aside className='right'>
       <div style={{width: '800px'}}>
