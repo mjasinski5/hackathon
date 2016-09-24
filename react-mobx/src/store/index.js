@@ -9,13 +9,13 @@ export default class Store {
   }
 
   @observable
-  name = '';
+  name = 'Andrzej';
 
   @observable 
-  age = '';
+  age = '30';
 
   @observable
-  city = '';
+  city = 'Wrocław';
 
   @observable
   outcomes = createOutcomesFromJson(json);
