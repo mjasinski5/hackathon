@@ -8,10 +8,11 @@ export default function App(){
     <section className="onethird">
         <div>
             <div>
-                
+                <h1>Marek, 27 lat</h1>
+                <h6>wanna be <strong>Prezydent miasta Wrocław</strong></h6>
             </div>
             <div>
-                
+                <Sliders />
             </div>
         </div>
     </section>
@@ -19,7 +20,7 @@ export default function App(){
         <Main />
     </section>
     <section className="onethird">
-
+        
     </section>
   </div>
   );

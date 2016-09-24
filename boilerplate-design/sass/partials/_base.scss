@@ -11,9 +11,39 @@ body {
 }
 
 #root {
-    background-color: pink;
+    width: 100vw;
+    height: 100vh;
 }
 
 .onethird {
     width: 33%;
+    box-sizing: border-box;
+    float: left;
+    padding: 1em 2em;
+    &:first-child {
+        border-right: 2px solid $white;
+    }
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-weight: 100;
+    font-size: 3em;
+}
+
+h6 {
+    background-color: $mainblue;
+    color: $white;
+    font-weight: 300;
+    font-size: 1em;
+    padding: .2em;
+    margin: 1em 0;
+    margin-bottom: 3em;
+}
+
+.category {
+    font-family: "Roboto Slab";
+    font-size: .9em;
+    margin-bottom: 0;
 }
