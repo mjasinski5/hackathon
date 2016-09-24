@@ -3,6 +3,8 @@ import { observer } from 'mobx-react';
 import Sliders from './components/Sliders';
 import Main from './components/Main';
 import Demographics from './components/Demographics';
+import LinearProgress from 'material-ui/LinearProgress';
+
 
 @observer
 export default class App extends Component {
@@ -10,11 +12,7 @@ export default class App extends Component {
   render(){
     const { store } = this.props.route;
     const { name, age, city } = store;
-    console.log('income', store.getTotalIncome)
-    console.log('outcome', store.getTotalOutcome)
-    console.log('currentLoanState', store.currentLoanState)
-    console.log('isLoadAllowed', store.isLoadAllowed)
-    console.log('maximumLoanValue', store.maximumLoanValue)
+    console.log('currentLoanStateInPercent', store.currentLoanStateInPercent)
     return(
       <div>
         <section className="onethird">
@@ -35,11 +33,13 @@ export default class App extends Component {
             <div>
                 <div className="balance">
                     <h5>balans</h5>
-                    <h2>{store.formatedOutcome} mln</h2>
+                    <h2>{store.formatedOutcome}</h2>
+                    <LinearProgress mode="determinate" value={store.currentLoanStateInPercent} color='#E23442' style={{height:'1.5em', width:'70%', float:'right'}}/>
                 </div>
                 <div className="credit">
                 </div>
-                <div className="demographics">
+                <div className="society">
+                    <button>zobacz dane demograficzne</button>
                     <Demographics />
                 </div>
             </div>

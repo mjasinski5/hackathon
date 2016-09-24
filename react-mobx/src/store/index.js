@@ -105,6 +105,11 @@ export default class Store {
   }
 
   @computed
+  get currentLoanStateInPercent() { 
+    return Math.abs(this.currentLoanState * 100 / this.maximumLoanValue);
+  }
+
+  @computed
   get formatedOutcome() { 
     return this._round(this.getTotalOutcome, 0);
   }
