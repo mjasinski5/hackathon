@@ -32,7 +32,7 @@ export default class App extends Component {
     // console.log('getCurrentPropertySale', store.getCurrentPropertySale)
     // console.log('currentLoanStateInPercent', store.currentLoanStateInPercent)
     // console.log('getCurrentPropertyTaxRate', store.getCurrentPropertyTaxRate)
-    // console.log('incomeOutcomeChartData', store.incomeOutcomeChartData)
+    console.log('propertyTaxSatisfaction', store.propertyTaxSatisfaction)
   
 
     return(

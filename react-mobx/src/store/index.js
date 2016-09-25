@@ -57,7 +57,7 @@ export default class Store {
         baseValue: 0,
         weight: 1000,
         minValue: 0,
-        maxValue: 1000
+        maxValue: 500
       })
     })
   }
@@ -262,7 +262,7 @@ export default class Store {
     const propertySaleSatisfaction = this.propertySaleSatifaction;
     const propertyTaxSatisfaction = this.propertyTaxSatisfaction;
 
-    const totalSatisfaction = satisfaction + taxesSatisfaction +propertySaleSatisfaction + propertyTaxSatisfaction;
+    const totalSatisfaction = satisfaction + taxesSatisfaction + propertySaleSatisfaction + propertyTaxSatisfaction;
     // const totalMinSatisfaction = this.minSocietySatisfaction + this.taxesMinSatisfaction;
     // const totalMaxSatisfaction = this.maxSocietySatisfaction + this.taxesMaxSatisfaction;
 
@@ -271,8 +271,9 @@ export default class Store {
   }
   
   _convertToUnit(value, min, max){
+    const newMax = max / 4
     const k = (Math.abs(min) + min) === 0 ? Math.abs(min) : 0;
-    return (value+k)/(max+k);
+    return (value+k)/(newMax+k);
   }
 
 
@@ -299,7 +300,7 @@ export default class Store {
   }
 
   _calculatePropertyTax(currentValue) { 
-    return this._calculateRateTax(currentValue, 0, 10000000)
+    return this._calculateRateTax(currentValue, 0, 100000)
   }
 
 

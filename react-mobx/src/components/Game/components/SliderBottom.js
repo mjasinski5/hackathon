@@ -66,7 +66,7 @@ export default class SliderBottom extends Component  {
           })}>
             <Slider 
               className='slider'
-              step={100} 
+              step={50} 
               value={value+1} 
               min={minValue}
               max={maxValue}
