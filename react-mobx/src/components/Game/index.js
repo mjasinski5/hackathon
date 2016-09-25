@@ -5,6 +5,7 @@ import Credit from './components/Credit';
 import Main from './components/Main';
 import Demographics from './components/Demographics';
 import LinearProgress from 'material-ui/LinearProgress';
+import SliderBottom from './components/SliderBottom';
 import ChartSatisfaction from './components/ChartSatisfaction';
 
 
@@ -17,10 +18,12 @@ export default class App extends Component {
     
     console.log('currentLoanStateInPercent', store.currentLoanStateInPercent)
     console.log('getTotalIncome', store.getTotalIncome)
+        console.log('getTotalOutcome', store.getTotalOutcome)
+
     console.log('maximumLoanValue', store.maximumLoanValue)
     console.log('currentLoanState', store.currentLoanState)
     console.log('isLoadAllowed', store.isLoadAllowed)
-    console.log('currentLoanStateInPercent', store.currentLoanStateInPercent)
+    console.log('getCurrentPropertySale', store.getCurrentPropertySale)
     console.log('currentLoanStateInPercent', store.currentLoanStateInPercent)
 
     return(
@@ -38,7 +41,7 @@ export default class App extends Component {
         </section>
         <section className="onethird">
             <Main store={store} />
-            <Credit />
+            <SliderBottom store={store}/>
         </section>
         <section className="onethird">
             <div>
@@ -48,7 +51,8 @@ export default class App extends Component {
                     <h5>zadłużenie</h5>
                     <div>
                         <LinearProgress mode="determinate" value={store.currentLoanStateInPercent} color='#E23442' style={{height:'1.5em', width:'70%', float:'right'}}/>
-                        <p>{store.societySatisfaction} %</p>
+                        <p>{store.currentLoanStateInPercent} %</p>
+                        {store.societySatisfaction} 
                     </div>
                 </div>
                 <div className="main-down">

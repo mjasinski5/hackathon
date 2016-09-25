@@ -158,6 +158,8 @@ h2 { font-size: 3.5em; text-align: center; }
 
 .credit { margin-top: 10em; padding-left: 3em; }
 
+.bar-wrapper { width: 50%; height: 40vh; float: left; }
+
 .category { font-family: "Roboto Slab"; font-size: 1.7vh; margin-bottom: 0; }
 
 .cat-description { position: absolute; right: 0; top: -12px; font-size: .8em; opacity: .8; }
@@ -178,7 +180,7 @@ h6 { background-color: #00BCD4; color: #ffffff; font-weight: 300; font-size: 1em
 
 canvas { margin: 1em auto 0; }
 
-.credit { width: 20%; padding: 0; margin: 6em 4em 0 0; float: right; display: flex; justify-content: space-between; }
+.credit { width: 20%; padding: 0; margin: 6em 2em 0 0; float: right; display: flex; justify-content: space-between; }
 
 .credit .credit-container { position: relative; }
 

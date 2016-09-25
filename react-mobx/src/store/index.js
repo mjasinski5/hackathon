@@ -36,6 +36,11 @@ export default class Store {
   } 
 
   @computed
+  get getCurrentPropertySale() {
+    return this.properties.get('sprzedaz').get('value');
+  }
+  
+  @computed
   get demographicsChartData() {
     return createDemographicsChartData(this.society);
   }
@@ -46,8 +51,8 @@ export default class Store {
         value: 0,
         baseValue: 0,
         weight: 1000,
-        min: 0,
-        max: 10432
+        minValue: 0,
+        maxValue: 1000
       })
     })
   }
@@ -60,13 +65,6 @@ export default class Store {
         minValue: 0,
         maxValue: 100,
         baseAmount: 435
-      }),
-      'mandaty': asMap({
-        value: 10,
-        baseValue: 10,
-        minValue: 0,
-        maxValue: 100,
-        baseAmount: 2.8
       })
     })
   }
@@ -126,10 +124,15 @@ export default class Store {
   get currentLoanState() { 
     return this.getTotalIncome - this.getTotalOutcome; 
   }
-
   @computed
-  get currentLoanStateInPercent() { 
-    return Math.abs(this.currentLoanState * 100 / this.maximumLoanValue);
+  get getCurrentPropertyTaxRate() {
+    return this.taxes.get('nieruchomosci').get('value');
+  }
+  @computed
+  get currentLoanStateInPercent() {
+    if(this.currentLoanState < 0 ) 
+      return Math.abs(this.currentLoanState * 100 / this.maximumLoanValue);
+    else return 0;
   }
 
   @computed
@@ -153,8 +156,8 @@ export default class Store {
     
     const income = this._getTotalAmountFromIncome(incomes);
     const incomeFromTax = this._getAmountFromTaxes(taxes)
-    console.log(income, incomeFromTax)
-    return income + incomeFromTax;
+
+    return income + incomeFromTax + this.getCurrentPropertySale;
   }
 
   _getTotalAmountFromIncome(incomes) { 
@@ -227,8 +230,14 @@ export default class Store {
 
   @computed
   get propertySaleSatifaction() { 
-    return this._calulcatePropertySale(this.properties.values());
+    return this._calulcatePropertySale(this.getCurrentPropertySale);
   }
+
+  @computed
+  get propertyTaxSatisfaction(){
+    return this._calculatePropertyTax(this.taxes.get('nieruchomosci').get('value'));
+  }
+
 
   _calcTaxValue(taxes, propertyToCheck) {
     let sum = 0;
@@ -246,7 +255,9 @@ export default class Store {
     const satisfaction = this.moneySatisfaction;
     const taxesSatisfaction =  this.taxesSatifsaction;
     const propertySaleSatisfaction = this.propertySaleSatifaction;
-    const totalSatisfaction = satisfaction + taxesSatisfaction;
+    const propertyTaxSatisfaction = this.propertyTaxSatisfaction;
+
+    const totalSatisfaction = satisfaction + taxesSatisfaction +propertySaleSatisfaction + propertyTaxSatisfaction;
     // const totalMinSatisfaction = this.minSocietySatisfaction + this.taxesMinSatisfaction;
     // const totalMaxSatisfaction = this.maxSocietySatisfaction + this.taxesMaxSatisfaction;
 
@@ -278,8 +289,14 @@ export default class Store {
     return (baseValue - currentValue) * weight;
   }
 
-  _calulcatePropertySale(currentValue, baseValue, weight) {
-      return this._calculateRateTax(currentValue, baseValue, weight)
+  _calulcatePropertySale(currentValue, weight) {
+      return -this._calculateRateTax(currentValue, 0, 10000000)
   }
+
+  _calculatePropertyTax(currentValue) { 
+    return this._calculateRateTax(currentValue, 0, 10000000)
+  }
+
+
 
 }
