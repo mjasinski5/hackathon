@@ -34,7 +34,9 @@ export default class Slider extends Component  {
     const muiTheme = getMuiTheme({
       slider: {
         trackColor: chart.color,
-        selectionColor: chart.color
+        selectionColor: chart.color,
+        handleFillColor: chart.color,
+        handleColorZero: chart.color
       },
     });
     return(

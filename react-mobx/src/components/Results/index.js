@@ -31,7 +31,7 @@ export default class Results extends Component {
             <h1 className="name">Jan, 55 lat</h1>
           </div>
           <div></div>
-          <h2>masz <span className="">40%</span> szans na wygraną w wyborach!</h2>
+          <h2>masz <span className="">{this.props.route.store.chancesToWin}%</span> szans na wygraną w wyborach!</h2>
         </div>
         <Link onClick={this.saveForm.bind(this)} to='app'>
           zagraj!
