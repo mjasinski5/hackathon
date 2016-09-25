@@ -18,12 +18,7 @@ export default class Slider extends Component  {
   }
 
   updateStore(_, value){
-    const { item, enabled } = this.props;
-    if(!enabled && value>this.value){
-      this.disabled = true;
-      setTimeout(()=>this.disabled=false, 500);
-      return;
-    }
+    const { item } = this.props;
     this.value = value;
     item.set('value', this.value);
   }

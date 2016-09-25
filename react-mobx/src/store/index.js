@@ -152,7 +152,6 @@ export default class Store {
   @computed
   get isLoadAllowed() { 
     const k = (Math.abs(this.currentLoanState) / this.getTotalIncome);
-
     return k < 0.115; // obliczone na papierze... dla reviewera!
   }
 

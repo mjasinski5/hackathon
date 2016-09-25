@@ -28,7 +28,7 @@
     }
     a.results {
         padding: .7em 0;
-        margin: 1em 2em 0;
+        margin: 2em 2em 0;
         text-align: center;
         height: auto;
         background-color: $mainblue;
@@ -41,6 +41,12 @@
         text-decoration: none;
         &:hover {
             cursor: pointer;
+        }
+    }
+    a.results--disabled {
+        background-color: $grey;
+        &:hover {
+            cursor: not-allowed;
         }
     }
     div.right div {
