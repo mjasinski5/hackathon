@@ -156,8 +156,6 @@ h2 { font-size: 3.5em; text-align: center; }
 
 .balance > div p { width: 60%; top: -14px; right: 0; text-align: center; color: #ffffff; position: absolute; z-index: 10; }
 
-.credit { margin-top: 10em; padding-left: 3em; }
-
 .bar-wrapper { width: 50%; height: 40vh; float: left; }
 
 .category { font-family: "Roboto Slab"; font-size: 1.7vh; margin-bottom: 0; }
@@ -186,20 +184,26 @@ canvas { margin: 1em auto 0; }
 
 .credit .credit-description { transform: rotate(-90deg); transform-origin: left top 0; font-size: .8em; display: inline-block; margin: 0; padding: 0; width: 200px; position: absolute; bottom: -15px; left: -20px; }
 
-.society { position: fixed; right: 0; bottom: 0; width: 25vw; box-sizing: border-box; padding: 2em; height: 50vh; background-color: #ffffff; }
+.right { float: right; }
 
-.society button { background-color: #00BCD4; outline: 0; border: 0; border-radius: 4px; color: #ffffff; font-size: .8em; float: right; }
+.society { position: fixed; right: 0; bottom: 0; width: 25vw; box-sizing: border-box; padding: 2em; height: 50vh; background-color: #ffffff; display: flex; flex-wrap: wrap; justify-content: space-between; }
 
-.society .face { width: 2.8vw; height: 2.8vw; float: left; background-repeat: no-repeat; background-position: center; }
+.society button { background-color: #00BCD4; outline: 0; border: 0; border-radius: 4px; color: #ffffff; font-size: .7em; float: right; display: inline-block; height: 2em; }
 
-.society .face__happy { background-image: url("./svg/happy.svg"); }
+.society div.right div { display: flex; justify-content: space-around; align-content: space-around; flex-wrap: wrap; }
 
-.society .face__sad { background-image: url("./svg/sad.svg"); }
+.society div.right div .face { width: 2vw; height: 2vw; margin: .2vw; box-sizing: border-box; float: left; background-repeat: no-repeat; background-position: center; background-size: contain; }
 
-.demo-title { margin: 0; font-size: .8em; font-weight: 500; }
+.society div.right div .face__happy { background-image: url("./svg/happy.svg"); }
+
+.society div.right div .face__sad { background-image: url("./svg/sad.svg"); }
+
+.society-title { font-size: .8em; }
+
+.demo-title { margin: 0; font-size: 1.2em; font-family: "Roboto Slab"; font-weight: 500; line-height: 2em; margin-bottom: 2em; }
 
 .demographics h6 { margin: 0 0 1em 0; }
 
-.chart_satisfactions { width: 25vw; height: 50vh; }
+.demo { padding: 3em; }
 
-.chart_satisfactions .happyFace { width: 2.8vw; height: 2.8vw; background-image: url("./svg/happy.svg"); }
+.demo h6 { font-size: 1.5em; display: inline-block; magin: 0; }
