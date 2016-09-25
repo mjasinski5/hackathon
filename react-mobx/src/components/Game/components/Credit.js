@@ -32,7 +32,8 @@ export default class Credit extends React.Component {
                     },
                     labels: {
                       show: true
-                    }
+                    },
+                    barThickness: 40,
                   }
                 ],
                 yAxes: [

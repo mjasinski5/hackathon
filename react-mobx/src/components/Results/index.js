@@ -4,7 +4,7 @@ import { observer } from 'mobx-react';
 import { Link } from 'react-router';
 
 @observer
-export default class LandingPage extends Component {
+export default class Results extends Component {
   @observable
   name = ''
 

@@ -35,8 +35,8 @@ export default class SliderBottom extends Component  {
           <p className="credit-description">Podatek od nieruchomości</p>
           <MuiThemeProvider muiTheme={getMuiTheme({
             slider: {
-              trackColor: '#ed4f2f',
-              selectionColor: '#ed4f2f'
+              trackColor: '#f9c932',
+              selectionColor: '#f9c932'
             },
           })}>
             <Slider 
@@ -60,8 +60,8 @@ export default class SliderBottom extends Component  {
           <p className="credit-description">Wyprzedaż majątku</p>
           <MuiThemeProvider muiTheme={getMuiTheme({
             slider: {
-              trackColor: '#ed2f2f',
-              selectionColor: '#ed2f2f'
+              trackColor: '#f9c932',
+              selectionColor: '#f9c932'
             },
           })}>
             <Slider 
