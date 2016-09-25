@@ -3,11 +3,12 @@
 export default [
   {
     filter: (store) => store.getCurrentPropertySale >= 200,
-    message: 'Warning about propertysale! ',
-    level: 'warning'  },
+    message: 'UWAŻAJ! Wyprzedajesz bezpowrotnie majątek miasta! To nie spodoba się Twoim wyborcom. Zobacz, jak spada zadowolenie społeczne! Postępuj ostrożnie!',
+    level: 'warning'  
+  },
   {
     filter: (store) => store.getPomocValue > 320,
-    message: 'Info about good!',
+    message: 'UWAŻAJ! Super, że dbasz o potrzebujących. Pamiętaj jednak, że budżet nie jest z gumy. Możesz wziąć kredyt, ale jednak zauważ, że zbliżasz się do limitu zadłużenia. Zwiększenie zadłużenia miasta wpłynie nie tylko na deficyt budżetowy w bieżącym roku, ale również na budżet długoterminowy. Postępuj ostrożnie!',
     level: 'info'  },
   {
     filter: (store) => store.getOswiataValue < 870,
