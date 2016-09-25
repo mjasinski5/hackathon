@@ -1,17 +1,23 @@
 .category {
     font-family: "Roboto Slab";
-    font-size: 1.7vh;
+    font-size: 1.5vh;
     margin-bottom: 0;
+    margin-top: 1.7vh;
 }
 
 .cat-description {
     position: absolute;
     right:0;
     top:-12px;
-    font-size: .8em;
+    font-size: .7em;
     opacity: .8;
+}
+
+.slider div[tabindex="0"]{
+    z-index: -1 !important;
 }
 
 .oneslider {
    position: relative;
 }
+

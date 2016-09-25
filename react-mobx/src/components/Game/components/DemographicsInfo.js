@@ -42,11 +42,19 @@ export default class DemographicsInfo extends React.Component {
         <div>
             <button onClick={this.handleToggle.bind(this)} >{innerText} dane demograficzne</button>
             <Drawer open={this.state.open} width={700} zDepth={5}>
-                <div className="demo">
+                <div className="demo"  style={{zIndex: '2000'}}>
                     <h6>{city}</h6>
                   <p className="demo-title">Dane demograficzne</p>
                   <div style={{width: '550px'}}>
-                    <HorizontalBar width={60} height={40} data={data} />
+                    <HorizontalBar 
+                        data={data}
+                        width={60} 
+                        height={40}              
+                        options={{
+                            legend: {
+                                display: false
+                            }
+                    }}/>
                   </div>
                 </div>
             </Drawer>

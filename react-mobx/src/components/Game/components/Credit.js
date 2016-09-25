@@ -8,29 +8,28 @@ export default class Credit extends React.Component {
     const { incomeOutcomeChartData} = this.props.store;
     console.log(this.props.store, incomeOutcomeChartData);
 
-    return(
-      <div>
-        <div className="bar-wrapper">
-          <Bar
-            data={incomeOutcomeChartData}
-            width={50}
-            height={100}
-            options={{
-              legend: {
-                  display: false
-                },
-              maintainAspectRatio: false,
-              display: false,
-              scales: {
-                xAxes: [
-                  {
-                    display: true,
-                    gridLines: {
-                      display: false
-                    },
-                    labels: {
-                      show: true
-                    }
+  return(
+      <div className="bar-wrapper" style={{height: '250px', paddingTop: '50px'}}>
+        <Bar
+          data={incomeOutcomeChartData}
+          width={50}
+          height={100}
+          options={{
+            legend: {
+                display: false
+              },
+            maintainAspectRatio: false,
+            display: false,
+            scales: {
+              xAxes: [
+                {
+                  display: true,
+                  gridLines: {
+                    display: false
+                  },
+                  labels: {
+                    show: true
+                  }
                   }
                 ],
                 yAxes: [
@@ -51,8 +50,6 @@ export default class Credit extends React.Component {
             }}
           />
         </div>
-        
-      </div>
     );
   }
 }
