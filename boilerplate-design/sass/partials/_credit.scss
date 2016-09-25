@@ -1,0 +1,30 @@
+.credit {
+    padding: 0;
+    // margin: 5em 2em 2em 0;
+    float:right;
+    display: flex;
+    justify-content: space-between;
+    .credit-container {
+        position: relative;
+        margin: 0 1em;
+    }
+    .credit-description {
+        transform: rotate(-90deg);
+        transform-origin: left top 0;
+        font-size: 1.7vh;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        position: absolute;
+        bottom: -15px;
+        left:-20px;
+        font-family: "Roboto Slab";
+    }
+}
+
+.bar-wrapper {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+}

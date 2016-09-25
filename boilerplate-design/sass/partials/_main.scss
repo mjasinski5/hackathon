@@ -37,31 +37,6 @@ canvas {
     margin: 1em auto 0;
 }
 
-.credit {
-    width: 20%;
-    padding: 0;
-    margin: 6em 2em 0 0;
-    float:right;
-    display: flex;
-    justify-content: space-between;
-    .credit-container {
-        position: relative;
-    }
-    .credit-description {
-        transform: rotate(-90deg);
-        transform-origin: left top 0;
-        font-size: 1.7vh;
-        display: inline-block;
-        margin: 0;
-        padding: 0;
-        width: 200px;
-        position: absolute;
-        bottom: -15px;
-        left:-20px;
-        font-family: "Roboto Slab";
-    }
-}
-
 .right {
     float: right;
 }

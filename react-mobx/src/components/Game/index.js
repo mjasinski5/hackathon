@@ -43,8 +43,10 @@ export default class App extends Component {
         </section>
         <section className="onethird">
             <Main store={store} />
+            <div>
             <SliderBottom store={store}/>
             <Credit />
+            </div>
         </section>
         <section className="onethird">
             <div>

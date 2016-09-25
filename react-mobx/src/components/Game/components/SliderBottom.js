@@ -24,15 +24,17 @@ export default class SliderBottom extends Component  {
     const minValueTax = itemTaxJS.minValue;
     const maxValueTax = itemTaxJS.maxValue;
 
+
     
     return(
-    <div className="bar-wrapper">
+    <div className="bar-wrapper right">
   
 
       <div className="credit">
         <div className="credit-container">
           <p className="credit-description">Podatek od nieruchomości</p>
-          <Slider 
+
+          <Slider
           step={1} 
           value={valueTax} 
           min={minValueTax}

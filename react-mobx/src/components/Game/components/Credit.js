@@ -19,8 +19,7 @@ const data = {
 
 export default function Credit(){
   return(
-    <div>
-      <div className="bar-wrapper">
+      <div className="bar-wrapper right">
         <Bar
           data={data}
           width={50}
@@ -62,6 +61,5 @@ export default function Credit(){
         />
       </div>
       
-    </div>
   );
 }

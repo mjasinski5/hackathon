@@ -22,6 +22,9 @@
         display: inline-block;
         height: 2em;
         marin-top: 1em;
+        &:hover {
+            cursor: pointer;
+        }
     }
     div.right div {
         display: flex;
@@ -69,6 +72,7 @@
 
 .demo {
     padding: 3em;
+    position: absolute;
     h6 {
         font-size: 1.5em;
         display: inline-block;

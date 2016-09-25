@@ -178,17 +178,21 @@ h6 { background-color: #00BCD4; color: #ffffff; font-weight: 300; font-size: 1em
 
 canvas { margin: 1em auto 0; }
 
-.credit { width: 20%; padding: 0; margin: 6em 2em 0 0; float: right; display: flex; justify-content: space-between; }
+.right { float: right; }
 
-.credit .credit-container { position: relative; }
+.credit { padding: 0; float: right; display: flex; justify-content: space-between; }
+
+.credit .credit-container { position: relative; margin: 0 1em; }
 
 .credit .credit-description { transform: rotate(-90deg); transform-origin: left top 0; font-size: 1.7vh; display: inline-block; margin: 0; padding: 0; width: 200px; position: absolute; bottom: -15px; left: -20px; font-family: "Roboto Slab"; }
 
-.right { float: right; }
+.bar-wrapper { display: flex; align-items: flex-end; justify-content: center; }
 
 .society { position: fixed; right: 0; bottom: 0; width: 25vw; box-sizing: border-box; padding: 2em; height: 50vh; background-color: #ffffff; display: flex; flex-wrap: wrap; justify-content: space-between; }
 
 .society button { background-color: #00BCD4; outline: 0; border: 0; border-radius: 4px; color: #ffffff; font-size: .7em; float: right; display: inline-block; height: 2em; marin-top: 1em; }
+
+.society button:hover { cursor: pointer; }
 
 .society div.right div { display: flex; justify-content: space-around; align-content: space-around; flex-wrap: wrap; }
 
@@ -204,6 +208,6 @@ canvas { margin: 1em auto 0; }
 
 .demographics h6 { margin: 0 0 1em 0; }
 
-.demo { padding: 3em; }
+.demo { padding: 3em; position: absolute; }
 
 .demo h6 { font-size: 1.5em; display: inline-block; magin: 0; }
