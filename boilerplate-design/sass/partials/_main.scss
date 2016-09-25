@@ -50,7 +50,7 @@ canvas {
     .credit-description {
         transform: rotate(-90deg);
         transform-origin: left top 0;
-        font-size: .8em;
+        font-size: 1.7vh;
         display: inline-block;
         margin: 0;
         padding: 0;
@@ -58,6 +58,7 @@ canvas {
         position: absolute;
         bottom: -15px;
         left:-20px;
+        font-family: "Roboto Slab";
     }
 }
 

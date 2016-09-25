@@ -21,6 +21,7 @@
         float: right;
         display: inline-block;
         height: 2em;
+        marin-top: 1em;
     }
     div.right div {
         display: flex;
@@ -47,7 +48,8 @@
 }
 
 .society-title {
-    font-size: .8em;
+    font-size: .9em;
+    margin-top: 0;
 }
 
 .demo-title {

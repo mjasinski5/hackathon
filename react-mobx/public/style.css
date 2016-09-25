@@ -182,13 +182,13 @@ canvas { margin: 1em auto 0; }
 
 .credit .credit-container { position: relative; }
 
-.credit .credit-description { transform: rotate(-90deg); transform-origin: left top 0; font-size: .8em; display: inline-block; margin: 0; padding: 0; width: 200px; position: absolute; bottom: -15px; left: -20px; }
+.credit .credit-description { transform: rotate(-90deg); transform-origin: left top 0; font-size: 1.7vh; display: inline-block; margin: 0; padding: 0; width: 200px; position: absolute; bottom: -15px; left: -20px; font-family: "Roboto Slab"; }
 
 .right { float: right; }
 
 .society { position: fixed; right: 0; bottom: 0; width: 25vw; box-sizing: border-box; padding: 2em; height: 50vh; background-color: #ffffff; display: flex; flex-wrap: wrap; justify-content: space-between; }
 
-.society button { background-color: #00BCD4; outline: 0; border: 0; border-radius: 4px; color: #ffffff; font-size: .7em; float: right; display: inline-block; height: 2em; }
+.society button { background-color: #00BCD4; outline: 0; border: 0; border-radius: 4px; color: #ffffff; font-size: .7em; float: right; display: inline-block; height: 2em; marin-top: 1em; }
 
 .society div.right div { display: flex; justify-content: space-around; align-content: space-around; flex-wrap: wrap; }
 
@@ -198,7 +198,7 @@ canvas { margin: 1em auto 0; }
 
 .society div.right div .face__sad { background-image: url("./svg/sad.svg"); }
 
-.society-title { font-size: .8em; }
+.society-title { font-size: .9em; margin-top: 0; }
 
 .demo-title { margin: 0; font-size: 1.2em; font-family: "Roboto Slab"; font-weight: 500; line-height: 2em; margin-bottom: 2em; }
 

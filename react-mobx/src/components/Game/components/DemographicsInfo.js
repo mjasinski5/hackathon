@@ -20,10 +20,15 @@ export default class DemographicsInfo extends React.Component {
 
     constructor(props) {
     super(props);
-    this.state = {open: false};
+    this.state = {open: false, innerText: 'zobacz'};
     }   
 
     handleToggle() {
+        if(this.state.open) {
+            this.setState({innerText: 'zobacz'});
+        } else {
+            this.setState({innerText: 'ukryj'});
+        }
         this.setState({open: !this.state.open});
     }
 
@@ -31,16 +36,17 @@ export default class DemographicsInfo extends React.Component {
 
         const { store } = this.props;
         const { name, age, city } = store;
+        const { innerText } = this.state;
 
         return (
         <div>
-            <button onClick={this.handleToggle.bind(this)} >zobacz dane demograficzne</button>
-            <Drawer open={this.state.open} width={700} zDepth={1000}>
+            <button onClick={this.handleToggle.bind(this)} >{innerText} dane demograficzne</button>
+            <Drawer open={this.state.open} width={700} zDepth={5}>
                 <div className="demo">
                     <h6>{city}</h6>
                   <p className="demo-title">Dane demograficzne</p>
                   <div style={{width: '550px'}}>
-                    <HorizontalBar width={60} height={60} data={data} />
+                    <HorizontalBar width={60} height={40} data={data} />
                   </div>
                 </div>
             </Drawer>
