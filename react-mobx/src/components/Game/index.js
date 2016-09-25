@@ -51,7 +51,8 @@ export default class App extends Component {
                     <h5>zadłużenie</h5>
                     <div>
                         <LinearProgress mode="determinate" value={store.currentLoanStateInPercent} color='#E23442' style={{height:'1.5em', width:'70%', float:'right'}}/>
-                        <p>{store.societySatisfaction} %</p>
+                        <p>{store.currentLoanStateInPercent} %</p>
+                        {store.societySatisfaction} 
                     </div>
                 </div>
                 <div className="main-down">

@@ -65,13 +65,6 @@ export default class Store {
         minValue: 0,
         maxValue: 100,
         baseAmount: 435
-      }),
-      'mandaty': asMap({
-        value: 10,
-        baseValue: 10,
-        minValue: 0,
-        maxValue: 100,
-        baseAmount: 2.8
       })
     })
   }
@@ -131,7 +124,10 @@ export default class Store {
   get currentLoanState() { 
     return this.getTotalIncome - this.getTotalOutcome; 
   }
-
+  @computed
+  get getCurrentPropertyTaxRate() {
+    return this.taxes.get('nieruchomosci').get('value');
+  }
   @computed
   get currentLoanStateInPercent() {
     if(this.currentLoanState < 0 ) 
@@ -237,6 +233,12 @@ export default class Store {
     return this._calulcatePropertySale(this.getCurrentPropertySale);
   }
 
+  @computed
+  get propertyTaxSatisfaction(){
+    return this._calculatePropertyTax(this.taxes.get('nieruchomosci').get('value'));
+  }
+
+
   _calcTaxValue(taxes, propertyToCheck) {
     let sum = 0;
       
@@ -253,8 +255,9 @@ export default class Store {
     const satisfaction = this.moneySatisfaction;
     const taxesSatisfaction =  this.taxesSatifsaction;
     const propertySaleSatisfaction = this.propertySaleSatifaction;
+    const propertyTaxSatisfaction = this.propertyTaxSatisfaction;
 
-    const totalSatisfaction = satisfaction + taxesSatisfaction +propertySaleSatisfaction;
+    const totalSatisfaction = satisfaction + taxesSatisfaction +propertySaleSatisfaction + propertyTaxSatisfaction;
     // const totalMinSatisfaction = this.minSocietySatisfaction + this.taxesMinSatisfaction;
     // const totalMaxSatisfaction = this.maxSocietySatisfaction + this.taxesMaxSatisfaction;
 
@@ -289,5 +292,11 @@ export default class Store {
   _calulcatePropertySale(currentValue, weight) {
       return -this._calculateRateTax(currentValue, 0, 10000000)
   }
+
+  _calculatePropertyTax(currentValue) { 
+    return this._calculateRateTax(currentValue, 0, 10000000)
+  }
+
+
 
 }

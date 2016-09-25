@@ -12,16 +12,36 @@ export default class SliderBottom extends Component  {
 
   render(){
     const { store } = this.props;
-    const item = store.properties.get('sprzedaz');
-    console.log('store.properties', store.properties,item)
-    const { value, minValue, maxValue } = toJS(item);
 
+    const item = store.properties.get('sprzedaz');
+    const itemTax = store.taxes.get('nieruchomosci');
+
+    const { value, minValue, maxValue } = toJS(item);
+    const itemTaxJS = toJS(itemTax);
+
+    const valueTax = itemTaxJS.value;
+    const minValueTax = itemTaxJS.minValue;
+    const maxValueTax = itemTaxJS.maxValue;
+
+    console.log('du[a]', itemTax, valueTax, minValueTax, maxValueTax)
     return(
     <div className="credit">
       <div className="credit-container">
         <p className="credit-description">Podatek od nieruchomości</p>
-        <Slider step={0.10} value={.5} style={{height: 200}} axis="y"
-          sliderStyle={{margin:'0 0 5px 0'}}/>
+        <Slider 
+        step={1} 
+        value={valueTax} 
+        min={minValueTax}
+        max={maxValueTax}
+        style={{height: 200}} 
+        axis="y"
+        sliderStyle={{margin:'0 0 5px 0'}}
+        onChange={(event, value) => {
+          this.value = value;
+          itemTax.set('value', this.value);
+        }}
+        onDragStop={() => itemTax.set('value', this.value)}
+        />
       </div>
       <div className="credit-container">
         <p className="credit-description">Wyprzedaż majątku</p>
