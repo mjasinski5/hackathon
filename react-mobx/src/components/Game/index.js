@@ -3,7 +3,8 @@ import { observer } from 'mobx-react';
 import Sliders from './components/Sliders';
 import Credit from './components/Credit';
 import Main from './components/Main';
-import Demographics from './components/Demographics';
+// import Demographics from './components/Demographics';
+import DemographicsInfo from './components/DemographicsInfo';
 import LinearProgress from 'material-ui/LinearProgress';
 import ChartSatisfaction from './components/ChartSatisfaction';
 
@@ -56,8 +57,11 @@ export default class App extends Component {
                     <div className="credit"></div>
                 </div>
                 <div className="society">
-                    <button>zobacz dane demograficzne</button>
-                    <ChartSatisfaction satisfaction={Math.floor(store.societySatisfaction*100)} />
+                    <p className="society-title">Społeczeństwo</p>
+                    <DemographicsInfo store={store}/>
+                    <div className="right">
+                        <ChartSatisfaction satisfaction={Math.floor(store.societySatisfaction*100)} />
+                    </div>
                 </div>
             </div>
         </section>

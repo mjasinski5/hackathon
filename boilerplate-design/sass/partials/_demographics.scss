@@ -7,38 +7,69 @@
     padding: 2em;
     height: 50vh;
     background-color: $white;
+    // padding-left: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     button {
         background-color: $mainblue;
         outline:0;
         border:0;
         border-radius: 4px;
         color: $white;
-        font-size: .8em;
+        font-size: .7em;
         float: right;
+        display: inline-block;
+        height: 2em;
     }
-    .face {
-        width: 2.8vw;
-        height: 2.8vw;
-        float: left;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-    .face__happy {
-        background-image: url('./svg/happy.svg');
-    }
-    .face__sad {
-        background-image: url('./svg/sad.svg');
-    }
+    div.right div {
+        display: flex;
+        justify-content: space-around;
+        align-content: space-around;
+        flex-wrap: wrap;
+        .face {
+            width: 2vw;
+            height: 2vw;
+            margin: .2vw;
+            box-sizing: border-box;
+            float: left;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+        .face__happy {
+            background-image: url('./svg/happy.svg');
+        }
+        .face__sad {
+            background-image: url('./svg/sad.svg');
+        }
+    }   
+}
+
+.society-title {
+    font-size: .8em;
 }
 
 .demo-title {
     margin: 0;
-    font-size: .8em;
+    font-size: 1.2em;
+    font-family: "Roboto Slab";
     font-weight: 500;
+    line-height: 2em;
+    margin-bottom: 2em;
 }
 
 .demographics {
     h6 {
         margin: 0 0 1em 0;
+    }
+}
+
+.demo {
+    padding: 3em;
+    h6 {
+        font-size: 1.5em;
+        display: inline-block;
+        magin: 0;
     }
 }
