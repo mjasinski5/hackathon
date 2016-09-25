@@ -146,11 +146,13 @@ body { background-color: #e6e6e6; display: flex; justify-content: center; align-
 
 h2 { font-size: 3.5em; text-align: center; }
 
-.balance { text-align: right; }
+.balance { text-align: right; position: relative; right: -2.5em; }
 
-.balance h2 { margin-top: 0; text-align: right; color: #000000; }
+.balance h2 { margin-top: 0; text-align: right; color: #000000; font-size: 3.2em; }
 
-.balance h5 { color: #999999; font-size: 1.3em; font-weight: 400; font-family: "Roboto Slab", serif; margin-bottom: 1em; }
+.balance h4 { font-size: 1.5em; margin: .3em 0 1.5em; }
+
+.balance h5 { color: #999999; font-size: 1.3em; font-weight: 400; font-family: "Roboto Slab", serif; margin-bottom: .5em; margin-top: .5em; }
 
 .balance > div { position: relative; }
 
@@ -162,7 +164,7 @@ h2 { font-size: 3.5em; text-align: center; }
 
 .cat-description { position: absolute; right: 0; top: -12px; font-size: .7em; opacity: .8; }
 
-.slider div[tabindex="0"] { z-index: -1 !important; }
+.slider div[tabindex="0"] { z-index: 0 !important; }
 
 .oneslider { position: relative; }
 
@@ -182,13 +184,9 @@ canvas { margin: 1em auto 0; }
 
 .right { float: right; }
 
-.bar-wrapper.right { margin-top: 1em; position: relative; }
-
-.bar-wrapper.right canvas { position: absolute; bottom: 0; left: 0; }
-
 .credit { padding: 0; float: right; display: flex; justify-content: space-between; }
 
-.credit .credit-container { position: relative; margin: 0 1em; }
+.credit .credit-container { position: relative; margin: 0 1.5em; }
 
 .credit .credit-description { transform: rotate(-90deg); transform-origin: left top 0; font-size: 1.7vh; display: inline-block; margin: 0; padding: 0; width: 200px; position: absolute; bottom: -15px; left: -20px; font-family: "Roboto Slab"; }
 
@@ -199,6 +197,10 @@ canvas { margin: 1em auto 0; }
 .society button { background-color: #00BCD4; outline: 0; border: 0; border-radius: 4px; color: #ffffff; font-size: .7em; float: right; display: inline-block; height: 2em; marin-top: 1em; }
 
 .society button:hover { cursor: pointer; }
+
+.society a.results { padding: .7em 0; margin: 1em 2em 0; text-align: center; height: auto; background-color: #00BCD4; outline: 0; border: 0; border-radius: 4px; color: #ffffff; font-size: .9em; display: block; text-decoration: none; }
+
+.society a.results:hover { cursor: pointer; }
 
 .society div.right div { display: flex; justify-content: space-around; align-content: space-around; flex-wrap: wrap; }
 

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { observer } from 'mobx-react';
+import { Link } from 'react-router';
+
 import Sliders from './components/Sliders';
 import Credit from './components/Credit';
 import Main from './components/Main';
@@ -58,9 +60,11 @@ export default class App extends Component {
         <section className="onethird">
             <div>
                 <div className="balance">
-                    <h5>wydatki</h5>
+                    <h5>Wydałeś już:</h5>
                     <h2>{store.formatedOutcome} mln</h2>
-                    <h5>zadłużenie</h5>
+                    <h5>Zadłużyłeś miato na:</h5>
+                    <h4>12345 mln</h4>
+                    <h5>Limit zadłużenia:</h5>
                     <div>
                         <LinearProgress mode="determinate" value={store.currentLoanStateInPercent} color='#E23442' style={{height:'1.5em', width:'70%', float:'right'}}/>
                         <p>{store.currentLoanStateInPercent} %</p>
@@ -75,6 +79,7 @@ export default class App extends Component {
                     <DemographicsInfo store={store}/>
                     <div className="right">
                         <ChartSatisfaction satisfaction={Math.floor(store.societySatisfaction*100)} />
+                        <Link to='result' className="results">WYNIKI WYBORÓW</Link>
                     </div>
                 </div>
             </div>

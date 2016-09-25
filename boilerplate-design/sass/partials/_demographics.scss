@@ -26,6 +26,23 @@
             cursor: pointer;
         }
     }
+    a.results {
+        padding: .7em 0;
+        margin: 1em 2em 0;
+        text-align: center;
+        height: auto;
+        background-color: $mainblue;
+        outline:0;
+        border:0;
+        border-radius: 4px;
+        color: $white;
+        font-size: .9em;
+        display: block;
+        text-decoration: none;
+        &:hover {
+            cursor: pointer;
+        }
+    }
     div.right div {
         display: flex;
         justify-content: space-around;

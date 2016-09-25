@@ -56,18 +56,26 @@ h2 {
 
 .balance {
     text-align: right;
+    position: relative;
+    right: -2.5em;
     // margin-top: 5em;
     h2 {
         margin-top: 0;
         text-align: right;
         color: $black;
+        font-size: 3.2em;
+    }
+    h4 {
+        font-size: 1.5em;
+        margin: .3em 0 1.5em;
     }
     h5 {
        color: $grey;
        font-size: 1.3em;
        font-weight: 400;
        font-family: "Roboto Slab", serif;
-       margin-bottom: 1em;
+       margin-bottom: .5em;
+       margin-top: .5em;
     }
     > div {
         position: relative;
