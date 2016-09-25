@@ -36,7 +36,9 @@ export default class SliderBottom extends Component  {
           <MuiThemeProvider muiTheme={getMuiTheme({
             slider: {
               trackColor: '#f9c932',
-              selectionColor: '#f9c932'
+              selectionColor: '#f9c932',
+              handleFillColor: '#f9c932',
+              handleColorZero: '#f9c932'              
             },
           })}>
             <Slider 
@@ -61,7 +63,9 @@ export default class SliderBottom extends Component  {
           <MuiThemeProvider muiTheme={getMuiTheme({
             slider: {
               trackColor: '#f9c932',
-              selectionColor: '#f9c932'
+              selectionColor: '#f9c932',
+              handleFillColor: '#f9c932',
+              handleColorZero: '#f9c932'
             },
           })}>
             <Slider 

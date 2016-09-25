@@ -3,6 +3,7 @@ import { asMap } from 'mobx';
 export default  {
   '0-9': {
     size: 61317,
+    voters: 0, 
     weights: asMap({
       'Oświata i wychowanie': 10,
       'Transport i łączność': 0,
@@ -21,6 +22,7 @@ export default  {
   },
   '10-19': {
     size: 45222,
+    voters: 0.02,
     weights: asMap({
       'Oświata i wychowanie': 10,
       'Transport i łączność': 6,
@@ -39,6 +41,7 @@ export default  {
   },
   '20-29': {
     size: 88582,
+    voters: 0.3,
     weights: asMap({
       'Oświata i wychowanie': 7,
       'Transport i łączność': 8,
@@ -57,6 +60,7 @@ export default  {
   },
   '30-39': {
     size: 120268,
+    voters: 0.3,
     weights: asMap({
       'Oświata i wychowanie': 3,
       'Transport i łączność': 10,
@@ -75,6 +79,7 @@ export default  {
   },
   '40-49': {
     size: 74511,
+    voters: 0.3,
     weights: asMap({
       'Oświata i wychowanie': 10,
       'Transport i łączność': 8,
@@ -93,6 +98,7 @@ export default  {
   },
   '50-59': {
     size: 82526,
+    voters: 0.3,
       weights: asMap({
       'Oświata i wychowanie': 3,
       'Transport i łączność': 5,
@@ -111,6 +117,7 @@ export default  {
   },
   '60-69': {
     size: 86230,
+    voters: 0.3,
       weights: asMap({
       'Oświata i wychowanie': 1,
       'Transport i łączność': 10,
@@ -129,6 +136,7 @@ export default  {
   },
   '70-79': {
     size: 43142,
+    voters: 0.3,
       weights: asMap({
       'Oświata i wychowanie': 1,
       'Transport i łączność': 10,
@@ -147,6 +155,7 @@ export default  {
   },
   '>80': {
     size: 32689,
+    voters: 0.3,
       weights: asMap({
       'Oświata i wychowanie': 0,
       'Transport i łączność': 10,

@@ -206,8 +206,6 @@ export default class Store {
     return sum;
   }
 
-
-
   @computed 
   get minSocietySatisfaction(){
     return this.society.values().reduce( (sum, group) => {
@@ -260,11 +258,10 @@ export default class Store {
 
   _calcTaxValue(taxes, propertyToCheck) {
     let sum = 0;
-      
-      const result = taxes.values().forEach( (curr) => { 
-        const taxRate = this._calculateRateTax(curr.get('baseValue'), curr.get(propertyToCheck), taxWeight);
-        sum += taxRate;
-      });
+    const result = taxes.values().forEach( (curr) => { 
+      const taxRate = this._calculateRateTax(curr.get('baseValue'), curr.get(propertyToCheck), taxWeight);
+      sum += taxRate;
+    });
 
     return sum;
   }  
@@ -283,6 +280,45 @@ export default class Store {
     return  Math.max(Math.min(this._convertToUnit(totalSatisfaction, this.minSocietySatisfaction, this.maxSocietySatisfaction), 1), 0);
     // return  this._convertToUnit(satisfaction, this.minSocietySatisfaction, this.maxSocietySatisfaction);
   }
+
+  /**
+   * CHANCES TO WIN
+   */
+  @computed 
+  get minSocietySatisfactionOnlyVoters(){
+    return this.society.values().reduce( (sum, group) => {
+      return this._calc(group, sum, 'minValue', true);
+    }, 0);
+  }
+
+  
+  @computed 
+  get maxSocietySatisfactionOnlyVoters(){
+    return this.society.values().reduce( (sum, group) => {
+      return this._calc(group, sum, 'maxValue', true);
+    }, 0);
+  }
+
+  @computed 
+  get moneySatisfactionOnlyVoters(){
+    return this.society.values().reduce( (sum, group) => {
+     return this._calc(group, sum, 'value', true);
+    }, 0);
+  }
+
+  @computed
+  get chancesToWin(){
+    const satisfaction = this.moneySatisfactionOnlyVoters;
+    const taxesSatisfaction =  this.taxesSatifsaction;
+    const propertySaleSatisfaction = this.propertySaleSatifaction;
+    const propertyTaxSatisfaction = this.propertyTaxSatisfaction;
+
+    const totalSatisfaction = satisfaction + taxesSatisfaction +propertySaleSatisfaction + propertyTaxSatisfaction;
+
+    const unit =  Math.max(Math.min(this._convertToUnit(totalSatisfaction, this.minSocietySatisfactionOnlyVoters, this.maxSocietySatisfactionOnlyVoters), 1), 0);
+    console.log(unit);
+    return Math.floor(unit*100);
+  }
   
   _convertToUnit(value, min, max){
     const newMax = max / 4
@@ -291,8 +327,8 @@ export default class Store {
   }
 
 
-  _calc(group, sum, propertyToGet) {
-    const size = group.size
+  _calc(group, sum, propertyToGet, onlyVoters = false) {
+    const size = onlyVoters ? Math.floor(group.size * group.voters) : group.size;
     const weights = group.weights
     const groupRate = weights.keys().reduce( (sum, name) => {
       const outcome = this.outcomes.get(name);
