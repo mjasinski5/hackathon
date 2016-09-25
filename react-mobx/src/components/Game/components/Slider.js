@@ -8,10 +8,24 @@ import SliderMUI from 'material-ui/Slider';
 @observer
 export default class Slider extends Component  {
   @observable
+  disabled = false
+
+  @observable
   value = 0
 
   componentDidMount(){
     this.value = this.props.item.get('value');
+  }
+
+  updateStore(_, value){
+    const { item, enabled } = this.props;
+    if(!enabled && value>this.value){
+      this.disabled = true;
+      setTimeout(()=>this.disabled=false, 500);
+      return;
+    }
+    this.value = value;
+    item.set('value', this.value);
   }
 
   render(){
@@ -29,19 +43,16 @@ export default class Slider extends Component  {
           {name}
         </p>
         <p className='cat-description'>
-          {Math.floor(this.value)} mln
+          {Math.floor(value)} mln
         </p>
         <MuiThemeProvider muiTheme={muiTheme}>
         <SliderMUI 
+          disabled={this.disabled}
           step={1}
-          value={value} 
+          value={this.value} 
           min={minValue}
           max={maxValue}
-          onChange={(event, value) => {
-            this.value = value;
-            item.set('value', this.value);
-          }}
-          onDragStop={() => item.set('value', this.value)}
+          onChange={this.updateStore.bind(this)}
           sliderStyle={{margin:'0 0 5px 0'}}
         />
         </MuiThemeProvider>
