@@ -70,8 +70,9 @@ export default class SliderBottom extends Component  {
           })}>
             <Slider 
               className='slider'
+              step={50} 
+              value={value+1} 
               step={100} 
-              value={value} 
               min={minValue}
               max={maxValue}
               style={{height: 200}} 

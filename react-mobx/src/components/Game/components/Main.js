@@ -6,7 +6,7 @@ import Slider from 'material-ui/Slider';
 function Main({ store }){
   return(
     <div>
-        <div style={{width: '400px'}}>
+        <div style={{width: '440px'}}>
           <Doughnut
             data={store.chartDataDoughnut} 
             width={100} height={100}
