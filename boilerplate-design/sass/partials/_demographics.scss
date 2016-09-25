@@ -5,7 +5,7 @@
     width: 25vw;
     box-sizing: border-box;
     padding: 2em;
-    height: 43vh;
+    height: 50vh;
     background-color: $white;
     // padding-left: 2em;
     display: flex;
@@ -22,6 +22,23 @@
         display: inline-block;
         height: 2em;
         marin-top: 1em;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    a.results {
+        padding: .7em 0;
+        margin: 1em 2em 0;
+        text-align: center;
+        height: auto;
+        background-color: $mainblue;
+        outline:0;
+        border:0;
+        border-radius: 4px;
+        color: $white;
+        font-size: .9em;
+        display: block;
+        text-decoration: none;
         &:hover {
             cursor: pointer;
         }
