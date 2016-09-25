@@ -1,18 +1,18 @@
 .onethird {
-    width: 33%;
-    min-height: 100vh;
+    width: 37%;
+    height: 100vh;
     box-sizing: border-box;
     float: left;
     padding: 1em 2em;
     &:first-child {
         border-right: 2px solid $white;
+        overflow: scroll;
     }
     &:nth-child(2) {
         width:40%;
-
     }
     &:nth-child(3) {
-        width: 23%;
+        width: 20%;
     }
 }
 

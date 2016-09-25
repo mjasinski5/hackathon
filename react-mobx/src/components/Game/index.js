@@ -57,7 +57,7 @@ export default class App extends Component {
                 <div className="balance">
                     <h5>Wydałeś już:</h5>
                     <h2>{store.formatedOutcome} mln</h2>
-                    <h5>Zadłużyłeś miato na:</h5>
+                    <h5>Zadłużyłeś miasto na:</h5>
                     <h4>{store.formatedLoanState} mln</h4>
                     <h5>Limit zadłużenia:</h5>
                     <div>

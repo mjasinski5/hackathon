@@ -10,7 +10,7 @@ export default class Credit extends React.Component {
 
     return(
       <div>
-        <div className="bar-wrapper" style={{height: '250px', paddingTop: '30px'}}>
+        <div className="bar-wrapper" style={{height: '300px', paddingTop: '30px'}}>
           <Bar
             data={incomeOutcomeChartData}
             width={50}
