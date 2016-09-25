@@ -158,9 +158,9 @@ h2 { font-size: 3.5em; text-align: center; }
 
 .bar-wrapper { width: 50%; height: 40vh; float: left; }
 
-.category { font-family: "Roboto Slab"; font-size: 1.7vh; margin-bottom: 0; }
+.category { font-family: "Roboto Slab"; font-size: 1.5vh; margin-bottom: 0; margin-top: 1.7vh; }
 
-.cat-description { position: absolute; right: 0; top: -12px; font-size: .8em; opacity: .8; }
+.cat-description { position: absolute; right: 0; top: -12px; font-size: .7em; opacity: .8; }
 
 .slider div[tabindex="0"] { z-index: -1 !important; }
 
@@ -181,6 +181,10 @@ h6 { background-color: #00BCD4; color: #ffffff; font-weight: 300; font-size: 1em
 canvas { margin: 1em auto 0; }
 
 .right { float: right; }
+
+.bar-wrapper.right { margin-top: 1em; position: relative; }
+
+.bar-wrapper.right canvas { position: absolute; bottom: 0; left: 0; }
 
 .credit { padding: 0; float: right; display: flex; justify-content: space-between; }
 

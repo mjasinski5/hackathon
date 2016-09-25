@@ -40,3 +40,13 @@ canvas {
 .right {
     float: right;
 }
+
+.bar-wrapper.right {
+    margin-top: 1em;
+    position: relative;
+    canvas {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}

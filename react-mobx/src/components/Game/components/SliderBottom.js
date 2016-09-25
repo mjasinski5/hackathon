@@ -27,7 +27,7 @@ export default class SliderBottom extends Component  {
 
     
     return(
-    <div className="bar-wrapper right">
+    <div className="bar-wrapper right" style={{height: '250px'}}>
   
 
       <div className="credit">

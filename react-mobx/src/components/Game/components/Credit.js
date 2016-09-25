@@ -9,7 +9,7 @@ export default class Credit extends React.Component {
     console.log(this.props.store, incomeOutcomeChartData);
 
   return(
-      <div className="bar-wrapper right">
+      <div className="bar-wrapper" style={{height: '250px', paddingTop: '50px'}}>
         <Bar
           data={incomeOutcomeChartData}
           width={50}
