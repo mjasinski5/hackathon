@@ -25,6 +25,7 @@ export default class App extends Component {
     console.log('isLoadAllowed', store.isLoadAllowed)
     console.log('getCurrentPropertySale', store.getCurrentPropertySale)
     console.log('currentLoanStateInPercent', store.currentLoanStateInPercent)
+    console.log('getCurrentPropertyTaxRate', store.getCurrentPropertyTaxRate)
 
     return(
       <div>
@@ -52,7 +53,6 @@ export default class App extends Component {
                     <div>
                         <LinearProgress mode="determinate" value={store.currentLoanStateInPercent} color='#E23442' style={{height:'1.5em', width:'70%', float:'right'}}/>
                         <p>{store.currentLoanStateInPercent} %</p>
-                        {store.societySatisfaction} 
                     </div>
                 </div>
                 <div className="main-down">
