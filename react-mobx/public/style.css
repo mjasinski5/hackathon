@@ -162,7 +162,7 @@ h2 { font-size: 3.5em; text-align: center; }
 
 .cat-description { position: absolute; right: 0; top: -12px; font-size: .8em; opacity: .8; }
 
-.slider div[tabindex="0"] { z-index: -1 !important; }
+.slider div[tabindex="0"] { z-index: 0 !important; }
 
 .oneslider { position: relative; }
 

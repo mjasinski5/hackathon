@@ -17,10 +17,15 @@ export default class Credit extends React.Component {
             height={100}
             options={{
               legend: {
-                  display: false
-                },
+                display: false,
+                labels: {
+                  fontColor: 'red'
+                } 
+              },
+              animation: {
+                duration: 0
+              },
               maintainAspectRatio: false,
-              display: false,
               scales: {
                 xAxes: [
                   {
