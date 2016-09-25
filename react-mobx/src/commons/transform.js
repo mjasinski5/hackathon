@@ -28,7 +28,7 @@ export function createIncomeOutcomeChartData(income, outcome) {
         pointRadius: 1,
         pointHitRadius: 10,
         data: [income, outcome, 0],
-        backgroundColor: '#999999'
+        backgroundColor: ['#0096a9', '#66d6e5']
       }
     ]
   };

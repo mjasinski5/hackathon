@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { observer } from 'mobx-react';
+import { Link } from 'react-router';
+
 import Sliders from './components/Sliders';
 import Credit from './components/Credit';
 import Main from './components/Main';
@@ -75,6 +77,7 @@ export default class App extends Component {
                     <DemographicsInfo store={store}/>
                     <div className="right">
                         <ChartSatisfaction satisfaction={Math.floor(store.societySatisfaction*100)} />
+                        <Link to='result'><button>Sprawdz wynik</button></Link>
                     </div>
                 </div>
             </div>

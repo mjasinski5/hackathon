@@ -11,11 +11,47 @@ import NotificationSystem from 'react-notification-system';
 class App extends Component {
    componentDidMount() {
     const { store } = this.props;
-    
     const createNotification = notificationsFunc(store);
     const notificationsToAdd = notifications.map((props) => createNotification(props));
     notificationsToAdd.forEach((notification) => notification(this._notificationSystem.addNotification));
   }
+
+  getNotificationStyle(){
+    return {
+      Containers: {
+        DefaultStyle: {
+          fontFamily: 'Roboto Slab',
+        }
+      },
+      NotificationItem: {
+        DefaultStyle: {
+          borderRadius: '0'
+        },
+        warning: {
+          borderTop: '0',
+          color: '#fff',
+          backgroundColor: '#d83941',
+        },
+        success: {
+          borderTop: '0',
+          color: '#fff',
+          backgroundColor: '#40b572'
+        }
+      },
+      Dismiss: {
+        DefaultStyle: {
+          backgroundColor: '#fff'
+        },
+        warning: {
+          color: '#d83941'
+        },
+        success: {
+          color: '#40b572'
+        }
+      }
+    }
+  }
+
   render() {
     const { store } = this.props;
     return (
@@ -23,39 +59,7 @@ class App extends Component {
         <main>
           <NotificationSystem 
             ref={(ref) => this._notificationSystem = ref}
-            style={{
-              Containers: {
-                DefaultStyle: {
-                  fontFamily: 'Roboto Slab',
-                }
-              },
-              NotificationItem: {
-                DefaultStyle: {
-                  borderRadius: '0'
-                },
-                warning: {
-                  borderTop: '0',
-                  color: '#fff',
-                  backgroundColor: '#d83941',
-                },
-                success: {
-                  borderTop: '0',
-                  color: '#fff',
-                  backgroundColor: '#40b572'
-                }
-              },
-              Dismiss: {
-                DefaultStyle: {
-                  backgroundColor: '#fff'
-                },
-                warning: {
-                  color: '#d83941'
-                },
-                success: {
-                  color: '#40b572'
-                }
-              }
-            }}
+            style={this.getNotificationStyle()}
           />
           <Router history={browserHistory}>
             <Route path="/" component={LandingPage} store={store} />
