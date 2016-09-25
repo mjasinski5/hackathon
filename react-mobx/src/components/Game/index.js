@@ -22,21 +22,12 @@ export default class App extends Component {
   
   render(){
     const { store } = this.props.route;
-    const { name, age, city } = store;
+    const { name, age, city, isLoadAllowed } = store;
 
-    // console.log('currentLoanStateInPercent', store.currentLoanStateInPercent)
-    // console.log('getTotalIncome', store.getTotalIncome)
-    //     console.log('getTotalOutcome', store.getTotalOutcome)
-
-    // console.log('maximumLoanValue', store.maximumLoanValue)
-    // console.log('currentLoanState', store.currentLoanState)
-    // console.log('isLoadAllowed', store.isLoadAllowed)
-    // console.log('getCurrentPropertySale', store.getCurrentPropertySale)
-    // console.log('currentLoanStateInPercent', store.currentLoanStateInPercent)
-    // console.log('getCurrentPropertyTaxRate', store.getCurrentPropertyTaxRate)
-    // console.log('incomeOutcomeChartData', store.incomeOutcomeChartData)
-  
-
+    console.log('currentLoanStateInPercent', store.currentLoanStateInPercent)
+    console.log('isLoadAllowed', isLoadAllowed)
+    console.log('getTotalIncome', store.getTotalIncome)
+    console.log('currentLoanState', store.currentLoanState)
     return(
       <div>
         <section className="onethird">
@@ -79,7 +70,17 @@ export default class App extends Component {
                     <DemographicsInfo store={store}/>
                     <div className="right">
                         <ChartSatisfaction satisfaction={Math.floor(store.societySatisfaction*100)} />
-                        <Link to='result' className="results">WYNIKI WYBORÓW</Link>
+                        <Link 
+                            to='result'  
+                            className={`results ${isLoadAllowed ? '' : 'results--disabled'}`}
+                            onClick={(e)=>{
+                                if(isLoadAllowed)
+                                    return;
+                                e.preventDefault();
+                            }}
+                        >
+                            WYNIKI WYBORÓW
+                        </Link>
                     </div>
                 </div>
             </div>

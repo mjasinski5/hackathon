@@ -49,6 +49,20 @@ export default class Store {
   get incomeOutcomeChartData() {
     return createIncomeOutcomeChartData(this.getTotalIncome, this.getTotalOutcome);
   }
+
+  @computed 
+  get getOswiataValue() { 
+    return this._getValueFromOutcome('Oświata i wychowanie');
+  }
+
+  @computed 
+  get getPomocValue() { 
+    return this._getValueFromOutcome('Pomoc Spoleczna');
+  }
+
+  _getValueFromOutcome(name) { 
+    return this.outcomes.get(name).get('value');
+  }
   
   _createPropertySaleData() { 
     return asMap({
@@ -57,7 +71,7 @@ export default class Store {
         baseValue: 0,
         weight: 1000,
         minValue: 0,
-        maxValue: 1000
+        maxValue: 500
       })
     })
   }
@@ -126,8 +140,9 @@ export default class Store {
   }
 
   @computed
-  get currentLoanState() { 
-    return this.getTotalIncome - this.getTotalOutcome; 
+  get currentLoanState() {
+    const diff = this.getTotalIncome - this.getTotalOutcome; 
+    return diff > 0 ? 0 : diff;
   }
   @computed
   get getCurrentPropertyTaxRate() {
@@ -152,7 +167,6 @@ export default class Store {
   @computed
   get isLoadAllowed() { 
     const k = (Math.abs(this.currentLoanState) / this.getTotalIncome);
-
     return k < 0.115; // obliczone na papierze... dla reviewera!
   }
 
@@ -191,8 +205,6 @@ export default class Store {
 
     return sum;
   }
-
-
 
   @computed 
   get minSocietySatisfaction(){
@@ -246,11 +258,10 @@ export default class Store {
 
   _calcTaxValue(taxes, propertyToCheck) {
     let sum = 0;
-      
-      const result = taxes.values().forEach( (curr) => { 
-        const taxRate = this._calculateRateTax(curr.get('baseValue'), curr.get(propertyToCheck), taxWeight);
-        sum += taxRate;
-      });
+    const result = taxes.values().forEach( (curr) => { 
+      const taxRate = this._calculateRateTax(curr.get('baseValue'), curr.get(propertyToCheck), taxWeight);
+      sum += taxRate;
+    });
 
     return sum;
   }  
@@ -262,22 +273,62 @@ export default class Store {
     const propertySaleSatisfaction = this.propertySaleSatifaction;
     const propertyTaxSatisfaction = this.propertyTaxSatisfaction;
 
-    const totalSatisfaction = satisfaction + taxesSatisfaction +propertySaleSatisfaction + propertyTaxSatisfaction;
+    const totalSatisfaction = satisfaction + taxesSatisfaction + propertySaleSatisfaction + propertyTaxSatisfaction;
     // const totalMinSatisfaction = this.minSocietySatisfaction + this.taxesMinSatisfaction;
     // const totalMaxSatisfaction = this.maxSocietySatisfaction + this.taxesMaxSatisfaction;
 
     return  Math.max(Math.min(this._convertToUnit(totalSatisfaction, this.minSocietySatisfaction, this.maxSocietySatisfaction), 1), 0);
     // return  this._convertToUnit(satisfaction, this.minSocietySatisfaction, this.maxSocietySatisfaction);
   }
+
+  /**
+   * CHANCES TO WIN
+   */
+  @computed 
+  get minSocietySatisfactionOnlyVoters(){
+    return this.society.values().reduce( (sum, group) => {
+      return this._calc(group, sum, 'minValue', true);
+    }, 0);
+  }
+
+  
+  @computed 
+  get maxSocietySatisfactionOnlyVoters(){
+    return this.society.values().reduce( (sum, group) => {
+      return this._calc(group, sum, 'maxValue', true);
+    }, 0);
+  }
+
+  @computed 
+  get moneySatisfactionOnlyVoters(){
+    return this.society.values().reduce( (sum, group) => {
+     return this._calc(group, sum, 'value', true);
+    }, 0);
+  }
+
+  @computed
+  get chancesToWin(){
+    const satisfaction = this.moneySatisfactionOnlyVoters;
+    const taxesSatisfaction =  this.taxesSatifsaction;
+    const propertySaleSatisfaction = this.propertySaleSatifaction;
+    const propertyTaxSatisfaction = this.propertyTaxSatisfaction;
+
+    const totalSatisfaction = satisfaction + taxesSatisfaction +propertySaleSatisfaction + propertyTaxSatisfaction;
+
+    const unit =  Math.max(Math.min(this._convertToUnit(totalSatisfaction, this.minSocietySatisfactionOnlyVoters, this.maxSocietySatisfactionOnlyVoters), 1), 0);
+    console.log(unit);
+    return Math.floor(unit*100);
+  }
   
   _convertToUnit(value, min, max){
+    const newMax = max / 4
     const k = (Math.abs(min) + min) === 0 ? Math.abs(min) : 0;
-    return (value+k)/(max+k);
+    return (value+k)/(newMax+k);
   }
 
 
-  _calc(group, sum, propertyToGet) {
-    const size = group.size
+  _calc(group, sum, propertyToGet, onlyVoters = false) {
+    const size = onlyVoters ? Math.floor(group.size * group.voters) : group.size;
     const weights = group.weights
     const groupRate = weights.keys().reduce( (sum, name) => {
       const outcome = this.outcomes.get(name);
@@ -299,7 +350,7 @@ export default class Store {
   }
 
   _calculatePropertyTax(currentValue) { 
-    return this._calculateRateTax(currentValue, 0, 10000000)
+    return this._calculateRateTax(currentValue, 0, 100000)
   }
 
 

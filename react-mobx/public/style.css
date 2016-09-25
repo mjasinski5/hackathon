@@ -198,9 +198,13 @@ canvas { margin: 1em auto 0; }
 
 .society button:hover { cursor: pointer; }
 
-.society a.results { padding: .7em 0; margin: 1em 2em 0; text-align: center; height: auto; background-color: #00BCD4; outline: 0; border: 0; border-radius: 4px; color: #ffffff; font-size: .9em; display: block; text-decoration: none; }
+.society a.results { padding: .7em 0; margin: 2em 2em 0; text-align: center; height: auto; background-color: #00BCD4; outline: 0; border: 0; border-radius: 4px; color: #ffffff; font-size: .9em; display: block; text-decoration: none; }
 
 .society a.results:hover { cursor: pointer; }
+
+.society a.results--disabled { background-color: #999999; }
+
+.society a.results--disabled:hover { cursor: not-allowed; }
 
 .society div.right div { display: flex; justify-content: space-around; align-content: space-around; flex-wrap: wrap; }
 
