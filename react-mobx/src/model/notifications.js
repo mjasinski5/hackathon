@@ -7,8 +7,8 @@ export default [
     level: 'warning'  
   },
   {
-    filter: (store) => store.getPomocValue > 320,
-    message: 'UWAŻAJ! Super, że dbasz o potrzebujących. Pamiętaj jednak, że budżet nie jest z gumy. Możesz wziąć kredyt, ale jednak zauważ, że zbliżasz się do limitu zadłużenia. Zwiększenie zadłużenia miasta wpłynie nie tylko na deficyt budżetowy w bieżącym roku, ale również na budżet długoterminowy. Postępuj ostrożnie!',
+    filter: (store) => store.getPomocValue > 370,
+    message: 'UWAŻAJ! Super, że dbasz o potrzebujących. Pamiętaj jednak, że budżet nie jest z gumy. Zwiększenie zadłużenia miasta wpłynie nie tylko na deficyt budżetowy w bieżącym roku, ale również na budżet długoterminowy. Postępuj ostrożnie!',
     level: 'info'  },
   {
     filter: (store) => store.getOswiataValue < 870,
@@ -16,7 +16,7 @@ export default [
     level: 'warning'
   },
   {
-    filter: (store) => store.currentLoanStateInPercent > 100,
+    filter: (store) => store.currentLoanStateInPercent >= 100,
     message: 'Przekroczyłeś indywidualny wskaźnik zadłużenia! Dowiedz się więcej.',
     level: 'warning'
   }

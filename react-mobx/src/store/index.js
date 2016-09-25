@@ -144,6 +144,9 @@ export default class Store {
     const diff = this.getTotalIncome - this.getTotalOutcome; 
     return diff > 0 ? 0 : diff;
   }
+  get formatedLoanState() { 
+    return Math.abs(this._round(this.currentLoanState, 0))
+  }
   @computed
   get getCurrentPropertyTaxRate() {
     return this.taxes.get('nieruchomosci').get('value');
@@ -321,7 +324,7 @@ export default class Store {
   }
   
   _convertToUnit(value, min, max){
-    const newMax = max / 4
+    const newMax = max / 6
     const k = (Math.abs(min) + min) === 0 ? Math.abs(min) : 0;
     return (value+k)/(newMax+k);
   }

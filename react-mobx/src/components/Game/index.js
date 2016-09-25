@@ -27,7 +27,11 @@ export default class App extends Component {
     console.log('currentLoanStateInPercent', store.currentLoanStateInPercent)
     console.log('isLoadAllowed', isLoadAllowed)
     console.log('getTotalIncome', store.getTotalIncome)
+        console.log('outCome', store.getTotalOutcome)
+
     console.log('currentLoanState', store.currentLoanState)
+
+    
     return(
       <div>
         <section className="onethird">
@@ -54,7 +58,7 @@ export default class App extends Component {
                     <h5>Wydałeś już:</h5>
                     <h2>{store.formatedOutcome} mln</h2>
                     <h5>Zadłużyłeś miato na:</h5>
-                    <h4>12345 mln</h4>
+                    <h4>{store.formatedLoanState} mln</h4>
                     <h5>Limit zadłużenia:</h5>
                     <div>
                         <LinearProgress mode="determinate" value={store.currentLoanStateInPercent} color='#E23442' style={{height:'1.5em', width:'70%', float:'right'}}/>
