@@ -27,6 +27,7 @@ export default class App extends Component {
     console.log('getCurrentPropertySale', store.getCurrentPropertySale)
     console.log('currentLoanStateInPercent', store.currentLoanStateInPercent)
     console.log('getCurrentPropertyTaxRate', store.getCurrentPropertyTaxRate)
+    console.log('incomeOutcomeChartData', store.incomeOutcomeChartData)
 
     return(
       <div>
@@ -44,7 +45,7 @@ export default class App extends Component {
         <section className="onethird">
             <Main store={store} />
             <SliderBottom store={store}/>
-            <Credit />
+            <Credit store={store}/>
         </section>
         <section className="onethird">
             <div>
