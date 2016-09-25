@@ -1,7 +1,7 @@
 import { observable, computed, asMap } from 'mobx';
 
-const maxV = 1000000;
 const minV = 0;
+
 
 export function createOutcomesFromJson(jsonData) {
     const mobxArr = asMap({});
@@ -16,6 +16,23 @@ export function createOutcomesFromJson(jsonData) {
     return mobxArr;
 }
 
+export function createIncomeOutcomeChartData(income, outcome) {
+  console.log('im here') 
+  return  {
+    labels: ['przychody', 'wydatki'],
+    datasets: [
+      {
+        lineTension: 0,
+        borderDash: [],
+        borderDashOffset: 0.0,
+        pointRadius: 1,
+        pointHitRadius: 10,
+        data: [income, outcome, 0],
+        backgroundColor: '#999999'
+      }
+    ]
+  };
+}
 
 function _createEntry(obj, max) {
     return asMap({
