@@ -148,7 +148,7 @@ h2 { font-size: 3.5em; text-align: center; }
 
 .balance { text-align: right; }
 
-.balance h2 { margin-top: 0; text-align: right; color: #000000; }
+.balance h2 { margin-top: 0; text-align: right; color: #000000; font-size: 3.2em; }
 
 .balance h5 { color: #999999; font-size: 1.3em; font-weight: 400; font-family: "Roboto Slab", serif; margin-bottom: 1em; }
 
@@ -182,10 +182,6 @@ canvas { margin: 1em auto 0; }
 
 .right { float: right; }
 
-.bar-wrapper.right { margin-top: 1em; position: relative; }
-
-.bar-wrapper.right canvas { position: absolute; bottom: 0; left: 0; }
-
 .credit { padding: 0; float: right; display: flex; justify-content: space-between; }
 
 .credit .credit-container { position: relative; margin: 0 1em; }
@@ -194,7 +190,7 @@ canvas { margin: 1em auto 0; }
 
 .bar-wrapper { display: flex; align-items: flex-end; justify-content: center; }
 
-.society { position: fixed; right: 0; bottom: 0; width: 25vw; box-sizing: border-box; padding: 2em; height: 50vh; background-color: #ffffff; display: flex; flex-wrap: wrap; justify-content: space-between; }
+.society { position: fixed; right: 0; bottom: 0; width: 25vw; box-sizing: border-box; padding: 2em; height: 43vh; background-color: #ffffff; display: flex; flex-wrap: wrap; justify-content: space-between; }
 
 .society button { background-color: #00BCD4; outline: 0; border: 0; border-radius: 4px; color: #ffffff; font-size: .7em; float: right; display: inline-block; height: 2em; marin-top: 1em; }
 
