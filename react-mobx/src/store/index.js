@@ -140,8 +140,9 @@ export default class Store {
   }
 
   @computed
-  get currentLoanState() { 
-    return this.getTotalIncome - this.getTotalOutcome; 
+  get currentLoanState() {
+    const diff = this.getTotalIncome - this.getTotalOutcome; 
+    return diff > 0 ? 0 : diff;
   }
   @computed
   get getCurrentPropertyTaxRate() {

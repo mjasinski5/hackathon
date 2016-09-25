@@ -24,6 +24,10 @@ export default class App extends Component {
     const { store } = this.props.route;
     const { name, age, city, isLoadAllowed } = store;
 
+    console.log('currentLoanStateInPercent', store.currentLoanStateInPercent)
+    console.log('isLoadAllowed', isLoadAllowed)
+    console.log('getTotalIncome', store.getTotalIncome)
+    console.log('currentLoanState', store.currentLoanState)
     return(
       <div>
         <section className="onethird">
