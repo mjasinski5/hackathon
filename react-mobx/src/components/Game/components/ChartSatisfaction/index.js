@@ -14,6 +14,8 @@ export default function({ satisfaction }){
   const sads = [...Array(ALL_FACES-happiesCount)].map( (_, idx) =>
     <div className="face face__sad" key={idx} />
   )
+
+  console.log('wtf', happiesCount, happies)
   return(
     <div>
       {happies}

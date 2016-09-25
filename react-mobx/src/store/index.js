@@ -1,5 +1,5 @@
 import { observable, computed, asMap } from 'mobx';
-import { createOutcomesFromJson, createDogHuntData, createDemographicsChartData } from 'commons/transform';
+import { createOutcomesFromJson, createDogHuntData, createDemographicsChartData, createIncomeOutcomeChartData } from 'commons/transform';
 import json from 'data/mainData.json';
 
 const taxWeight = 700000000;
@@ -43,6 +43,11 @@ export default class Store {
   @computed
   get demographicsChartData() {
     return createDemographicsChartData(this.society);
+  }
+
+  @computed 
+  get incomeOutcomeChartData() {
+    return createIncomeOutcomeChartData(this.getTotalIncome, this.getTotalOutcome);
   }
   
   _createPropertySaleData() { 
