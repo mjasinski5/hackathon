@@ -219,3 +219,27 @@ canvas { margin: 1em auto 0; }
 .demo { padding: 3em; position: absolute; }
 
 .demo h6 { font-size: 1.5em; display: inline-block; magin: 0; }
+
+#result { width: 95vw; height: 92vh; background-color: #00BCD4; margin: 0 auto; margin-top: 4vh; padding: 3em; padding-top: 2em; box-sizing: border-box; }
+
+#result h2 { font-size: 2.8em; font-weight: 800; }
+
+#result .profile-pic { width: 30vh; height: 30vh; float: left; background-image: url("./svg/profilepic.svg"); }
+
+#result .data { float: left; padding: 0 10vh; min-height: 30vh; min-width: 35vw; border-right: 1px solid #ffffff; }
+
+#result .data .name { color: #ffffff; margin-bottom: .8em; font-size: 3.5em; }
+
+#result .data p { margin: 0; font-family: "Roboto Slab"; font-weight: 300; position: relative; top: -10px; }
+
+#result .data p > p:nth-child(2), #result .data p p:nth-child(3), #result .data p p:nth-child(4) { color: #ffffff; text-indent: 20vw; position: relative; top: -31px; font-size: 1em; }
+
+#result .graph { width: 33vh; height: 33vh; float: right; background-image: url("./svg/wroclaw-bar.svg"); background-repeat: no-repeat; background-position: center; }
+
+#result .final-result { clear: both; text-align: center; font-weight: 500; font-size: 2.5em; }
+
+#result .final-result span { color: #ffffff; font-size: 2.5em; }
+
+#result h3 { text-align: center; font-weight: 300; font-size: 1.7em; }
+
+#result h3 span { color: #ffffff; font-family: "Roboto Slab"; }
