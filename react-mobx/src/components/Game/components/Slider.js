@@ -46,15 +46,16 @@ export default class Slider extends Component  {
           {Math.floor(value)} mln
         </p>
         <MuiThemeProvider muiTheme={muiTheme}>
-        <SliderMUI 
-          disabled={this.disabled}
-          step={1}
-          value={this.value} 
-          min={minValue}
-          max={maxValue}
-          onChange={this.updateStore.bind(this)}
-          sliderStyle={{margin:'0 0 5px 0'}}
-        />
+          <SliderMUI 
+            className='slider'
+            disabled={this.disabled}
+            step={1}
+            value={this.value} 
+            min={minValue}
+            max={maxValue}
+            onChange={this.updateStore.bind(this)}
+            sliderStyle={{margin:'0 0 5px 0'}}
+          />
         </MuiThemeProvider>
       </div>
     );
