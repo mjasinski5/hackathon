@@ -17,11 +17,13 @@ class App extends Component {
     notificationsToAdd.forEach((notification) => notification(this._notificationSystem.addNotification));
   }
 
-  getNotificationStyle(){
+  getNotificationsStyle(){
     return {
       Containers: {
         DefaultStyle: {
           fontFamily: 'Roboto Slab',
+          width: 500,
+          padding: '2 rem'
         }
       },
       NotificationItem: {
@@ -37,6 +39,14 @@ class App extends Component {
           borderTop: '0',
           color: '#fff',
           backgroundColor: '#40b572'
+        }
+      },
+      Title: {
+        warning: {
+          color: '#000'
+        },
+        success: {
+          color: '#000'
         }
       },
       Dismiss: {
@@ -60,7 +70,7 @@ class App extends Component {
         <main>
           <NotificationSystem 
             ref={(ref) => this._notificationSystem = ref}
-            style={this.getNotificationStyle()}
+            style={this.getNotificationsStyle()}
           />
           <Router history={browserHistory}>
             <Route path="/" component={LandingPage} store={store} />
