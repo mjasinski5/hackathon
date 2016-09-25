@@ -22,13 +22,13 @@ class App extends Component {
       Containers: {
         DefaultStyle: {
           fontFamily: 'Roboto Slab',
-          width: 500,
-          padding: '2 rem'
+          width: 500
         }
       },
       NotificationItem: {
         DefaultStyle: {
-          borderRadius: '0'
+          borderRadius: '0',
+          padding: '20px'
         },
         warning: {
           borderTop: '0',
