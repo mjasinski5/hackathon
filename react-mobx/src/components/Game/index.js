@@ -3,31 +3,37 @@ import { observer } from 'mobx-react';
 import Sliders from './components/Sliders';
 import Credit from './components/Credit';
 import Main from './components/Main';
-// import Demographics from './components/Demographics';
+
 import DemographicsInfo from './components/DemographicsInfo';
 import LinearProgress from 'material-ui/LinearProgress';
 import SliderBottom from './components/SliderBottom';
 import ChartSatisfaction from './components/ChartSatisfaction';
 
+import notifications from 'model/notifications'
+import notificationsFunc from 'commons/notification';
+import NotificationSystem from 'react-notification-system';
 
 @observer
 export default class App extends Component {
 
+ 
+  
   render(){
     const { store } = this.props.route;
     const { name, age, city } = store;
-    
-    console.log('currentLoanStateInPercent', store.currentLoanStateInPercent)
-    console.log('getTotalIncome', store.getTotalIncome)
-        console.log('getTotalOutcome', store.getTotalOutcome)
 
-    console.log('maximumLoanValue', store.maximumLoanValue)
-    console.log('currentLoanState', store.currentLoanState)
-    console.log('isLoadAllowed', store.isLoadAllowed)
-    console.log('getCurrentPropertySale', store.getCurrentPropertySale)
-    console.log('currentLoanStateInPercent', store.currentLoanStateInPercent)
-    console.log('getCurrentPropertyTaxRate', store.getCurrentPropertyTaxRate)
-    console.log('incomeOutcomeChartData', store.incomeOutcomeChartData)
+    // console.log('currentLoanStateInPercent', store.currentLoanStateInPercent)
+    // console.log('getTotalIncome', store.getTotalIncome)
+    //     console.log('getTotalOutcome', store.getTotalOutcome)
+
+    // console.log('maximumLoanValue', store.maximumLoanValue)
+    // console.log('currentLoanState', store.currentLoanState)
+    // console.log('isLoadAllowed', store.isLoadAllowed)
+    // console.log('getCurrentPropertySale', store.getCurrentPropertySale)
+    // console.log('currentLoanStateInPercent', store.currentLoanStateInPercent)
+    // console.log('getCurrentPropertyTaxRate', store.getCurrentPropertyTaxRate)
+    // console.log('incomeOutcomeChartData', store.incomeOutcomeChartData)
+  
 
     return(
       <div>

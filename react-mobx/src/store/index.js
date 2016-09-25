@@ -136,7 +136,7 @@ export default class Store {
   @computed
   get currentLoanStateInPercent() {
     if(this.currentLoanState < 0 ) 
-      return Math.abs(this.currentLoanState * 100 / this.maximumLoanValue);
+      return this._round(Math.abs(this.currentLoanState * 100 / this.maximumLoanValue), 0)
     else return 0;
   }
 

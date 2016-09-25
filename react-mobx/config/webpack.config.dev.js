@@ -85,7 +85,9 @@ module.exports = {
       'react-native': 'react-native-web',
       'components': path.join(paths.appSrc, 'components'),
       'commons': path.join(paths.appSrc, 'commons'),
-      'data': path.join(paths.appSrc, 'data')
+      'data': path.join(paths.appSrc, 'data'),
+      'model': path.join(paths.appSrc, 'model')
+
     }
   },
   
