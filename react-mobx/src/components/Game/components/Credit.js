@@ -10,17 +10,14 @@ export default class Credit extends React.Component {
 
     return(
       <div>
-        <div className="bar-wrapper">
+        <div className="bar-wrapper" style={{height: '250px', paddingTop: '50px'}}>
           <Bar
             data={incomeOutcomeChartData}
             width={50}
             height={100}
             options={{
               legend: {
-                display: false,
-                labels: {
-                  fontColor: 'red'
-                } 
+                display: false
               },
               animation: {
                 duration: 0
@@ -56,7 +53,6 @@ export default class Credit extends React.Component {
             }}
           />
         </div>
-        
       </div>
     );
   }

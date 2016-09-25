@@ -24,9 +24,10 @@ export default class SliderBottom extends Component  {
     const minValueTax = itemTaxJS.minValue;
     const maxValueTax = itemTaxJS.maxValue;
 
+
     
     return(
-    <div className="bar-wrapper">
+    <div className="bar-wrapper right" style={{height: '250px'}}>
   
 
       <div className="credit">
