@@ -46,7 +46,15 @@ export default class DemographicsInfo extends React.Component {
                     <h6>{city}</h6>
                   <p className="demo-title">Dane demograficzne</p>
                   <div style={{width: '550px'}}>
-                    <HorizontalBar width={60} height={40} data={data} />
+                    <HorizontalBar 
+                        data={data}
+                        width={60} 
+                        height={40}              
+                        options={{
+                            legend: {
+                                display: false
+                            }
+                    }}/>
                   </div>
                 </div>
             </Drawer>
