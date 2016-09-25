@@ -49,6 +49,20 @@ export default class Store {
   get incomeOutcomeChartData() {
     return createIncomeOutcomeChartData(this.getTotalIncome, this.getTotalOutcome);
   }
+
+  @computed 
+  get getOswiataValue() { 
+    return this._getValueFromOutcome('Oświata i wychowanie');
+  }
+
+  @computed 
+  get getPomocValue() { 
+    return this._getValueFromOutcome('Pomoc Spoleczna');
+  }
+
+  _getValueFromOutcome(name) { 
+    return this.outcomes.get(name).get('value');
+  }
   
   _createPropertySaleData() { 
     return asMap({
