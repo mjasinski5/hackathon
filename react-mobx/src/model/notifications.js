@@ -20,7 +20,7 @@ export default [
     title: 'UWAŻAJ!'
   },
   {
-    filter: (store) => store.currentLoanStateInPercent > 100,
+    filter: (store) => store.currentLoanStateInPercent >= 100,
     message: 'Przekroczyłeś indywidualny wskaźnik zadłużenia! Dowiedz się więcej.',
     level: 'warning',
     title: 'UWAŻAJ!'
